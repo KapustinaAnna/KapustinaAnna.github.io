@@ -1,0 +1,11 @@
+.guide {
+    background: url('../../img/headerfon.png') center center no-repeat;
+    padding-bottom: 3.08rem;
+
+}
+
+.guide__content {
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-start;
+}

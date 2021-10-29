@@ -1,0 +1,18 @@
+/*--setups--*/
+@import "style.css";
+@import "fonts.css";
+@import "header.css";
+@import "style.css";
+@import "style.css";
+
+/*----blocks----*/
+@import "blocks/guide.css";
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/logo.css";
+@import "blocks/contacts.css";
+@import "blocks/problem.css";
+
+/*--elements----*/
+@import "elements/button.css";
+@import "elements/subtitle.css";
