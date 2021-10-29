@@ -1,0 +1,64 @@
+.problem__col {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 4.88rem;
+    box-sizing: border-box;
+
+}
+
+.problem__col-situation {
+    border-right: 1px solid black;
+       width: 50%;
+
+
+}
+
+.situation-img {
+    background: url('../../img/Rectangle(1).png')top right no-repeat;
+    padding-bottom: 40%;
+}
+
+.subtitle {
+    z-index: 100;
+
+}
+
+.situation-text {
+    padding-top: 3.125rem;
+    padding-left: 4rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.problem__col-solution {
+    
+    width: 40%;
+
+}
+
+.solution-text {
+    font-size: 0.785rem;
+    line-height: 1.25rem;
+
+}
+
+.solution-text__col {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3.125rem;
+}
+
+.title-solution {
+    font-size: 1rem;
+}
+
+.img-number {
+    text-align: left;
+    align-self: flex-end;
+}
+
+.description {
+    width: 70%;
+}
