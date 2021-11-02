@@ -1,0 +1,95 @@
+.feedback {
+    background: url('../../img/feedback.png') center no-repeat;
+    padding: 8rem 0 2rem 0;
+}
+
+.feedback__bg {
+    background: white;
+    box-sizing: border-box;
+    padding: 1.57rem 0rem 4rem 4rem;
+    width: 972px;
+}
+
+.feedback__form {
+    background: url('../../img/krugfb.png') no-repeat;
+    padding: 0 10.375rem 0 4.375rem;
+}
+
+.form {
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.form__item {
+    position: relative;
+    border-bottom: 1px solid #979797;
+    display: block;
+
+}
+
+.subject {
+    display: block;
+    color: #0000008A;
+    font-size: 0.75rem;
+    margin: 1rem 0 1rem 0;
+
+}
+
+.subject:nth-child(4) 
+{
+    margin-bottom:0;
+}
+.form__input {
+    outline: none;
+    border: none;
+
+
+}
+
+.form__input::placeholder {
+    color: #4b4a4a;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.form__textarea {
+    width: 19rem;
+    height: 1.5rem;
+    resize: none;
+
+}
+
+.form__personal {
+    display: block;
+    width: 19.3rem;
+}
+
+.form__col:first-child {
+    margin-right: 1.5rem;
+}
+
+.form__personal {
+    margin-top: 2rem;
+    font-size: 0.75rem;
+}
+
+.personal__link {
+    color: black;
+    text-decoration: underline;
+}
+
+.caption {
+    color: #651FFF;
+
+}
+
+.form__caption {
+    border-bottom: 2px solid #651FFF;
+}
+
+.form__button {
+    margin: 2rem 0 0 7.5rem;
+    border: none;
+}

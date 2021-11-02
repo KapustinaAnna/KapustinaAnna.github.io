@@ -1,0 +1,7 @@
+.column {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 4.88rem;
+    box-sizing: border-box;
+}

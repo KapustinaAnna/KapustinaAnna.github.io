@@ -1,13 +1,30 @@
 .button {
-    background: url("../../img/btn.png") center center no-repeat;
+    background: url("../../img/btn2.png") center center no-repeat;
     font-family: "Roboto Condensed";
     font-weight: bold;
-    font-size:1.125rem;
-    color:white;
-    padding:0.8rem 1.8rem 0.8rem 1rem;
-}
-.guide-btn {
-    background: url("../../img/btn2.png") center center no-repeat;
     padding: 1rem 3.5rem 1rem 2.5rem;
-    font-size:1.5rem;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+.call-btn {
+    background: url("../../img/btn.png") center center no-repeat;
+    font-size: 1.125rem;
+    padding: 0.8rem 1.8rem 0.8rem 1rem;
+}
+
+.btn-orange {
+    background: url("../../img/btn3.png") center center no-repeat;
+    padding: 1.5rem 3.125rem 1.5rem 2.75rem;
+}
+
+.partner-btn {
+    padding: 2.1rem 5rem 2.1rem 3.25rem;
+}
+
+.feedback-btn {
+    background: url("../../img/btn4.png") center center no-repeat;
+    padding: 1rem 3.5rem 1rem 3rem;
+    border: none;
 }

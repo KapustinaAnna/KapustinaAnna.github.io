@@ -1,0 +1,27 @@
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 4.7rem 0 7.5rem 0;
+}
+
+.footer__contacts {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    padding-bottom: 3.8rem;
+}
+
+.rights {
+    margin-right: 5rem;
+}
+
+.copy-text {
+    margin-left: 2rem;
+}
+
+.socials {
+    margin-right: 3rem;
+}

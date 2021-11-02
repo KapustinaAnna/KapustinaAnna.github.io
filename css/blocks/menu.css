@@ -1,11 +1,8 @@
-.menu-header {
-    margin-top: 1.2rem;
-}
-
 .menu__list {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 1.2rem;
 }
 
 .menu {

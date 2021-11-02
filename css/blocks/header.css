@@ -1,35 +1,37 @@
-.header__nav {
-    display:flex;
+.header__menu {
+    display: flex;
     justify-content: space-between;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
 .header__contacts {
-    display:flex;
-    align-items:flex-start;
-     justify-content: flex-end;
-     font-size:0.875rem;
-    
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-size: 0.875rem;
+
 }
+
 .title {
-    color:white;
-    font-size:3.375rem;
+    color: white;
+    font-size: 3.375rem;
     text-align: right;
-    margin-bottom:0;
+    margin-bottom: 0;
     text-transform: uppercase;
 }
 
 
 .guide__description {
-       font-size:1.375rem;
-       margin-bottom: 2rem;
+    font-size: 1.375rem;
+    margin-bottom: 2rem;
 }
 
 .guide__content-text {
-    width:28.5rem;
+    width: 28.5rem;
 }
+
 .img-girl {
     position: absolute;
-    left: 13.5rem;
-     
+    right: 30rem;
+
 }

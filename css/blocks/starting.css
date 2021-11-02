@@ -1,0 +1,56 @@
+.starting {
+    background: #651FFF;
+}
+
+.starting__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    counter-reset: num;
+    margin-bottom: 0;
+    padding-bottom: 3.125rem;
+}
+
+.starting__item {
+    background: url('../../img/numberlist.png') left no-repeat;
+    list-style: none;
+    color: white;
+    padding: 3rem 3rem 3rem 1.5rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.starting__item:before {
+    content: counter(num);
+    counter-increment: num;
+    padding-right: 2.2rem;
+    color: white;
+    font-family: Roboto Condensed;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.arrow {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    top: 20px;
+    width: 56px;
+    height: 2px;
+    background: white;
+    margin-right: -13px;
+    margin-top: -1px;
+
+}
+
+.starting__item::after {
+    content: '';
+    width: 15px;
+    height: 12px;
+    border-top: 2px solid #fdfdfd;
+    border-right: 2px solid #fbfbfc;
+    /* margin-right: 60px;*/
+    transform: rotate(45deg);
+
+}

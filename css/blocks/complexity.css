@@ -1,0 +1,48 @@
+.myself-list {
+    padding-left: 1.5rem;
+}
+
+.myself-item {
+    margin-bottom: 2.5rem;
+    list-style-image: url(../../img/circle.png);
+
+}
+
+.myself-list li {
+    padding-left: 1.25rem;
+}
+
+.myself-lead {
+    font-weight: bold;
+}
+
+.col-myself {
+    padding-bottom: 45%;
+    background: url('../../img/notebook.png')bottom 25% right no-repeat;
+    width: 100%;
+}
+
+.col-partner {
+    width: 100%;
+    padding-left: 5%;
+}
+
+.partner-text__col {
+    margin-bottom: 4rem;
+}
+
+.partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-content: flex-start;
+    margin: 0;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+}
+
+.partner-item {
+    list-style-image: url(../../img/list.svg);
+    margin-bottom: 2.5rem;
+    width: 12rem;
+}

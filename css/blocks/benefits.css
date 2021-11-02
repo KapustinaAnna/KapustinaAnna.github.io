@@ -1,0 +1,33 @@
+.benefits {
+    background: #7224ea;
+
+}
+
+.bg-benefits {
+    background: url('../../img/tel_krugi.png') no-repeat;
+    background-position: right -40% top 10%;
+}
+
+.benefits__col {
+    width: 70%;
+    padding-bottom: 5rem;
+
+}
+
+.benefits-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.benefits-text {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2.5rem 1.875rem 2.5rem 2.3rem;
+    box-sizing: border-box;
+    width: 23.4rem;
+    margin-bottom: 2.7rem;
+}

@@ -1,8 +1,12 @@
-.logo-title {
-    font-family:"Roboto Condensed";
-    font-size:3rem;
+.logo {
+    font-family: "Roboto Condensed";
+    font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
-   margin-bottom:1rem;
-   margin-top:0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.logo-small {
+    font-size: 2.25rem;
 }
