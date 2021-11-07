@@ -80,6 +80,10 @@
         background: none;
         padding: 1rem 0 3rem 0;
     }
+    /*--problem---*/
+    .situation__lead {
+        margin-top:0rem; 
+    }
 
     /*--process----*/
     .process__content {
@@ -171,6 +175,7 @@
 
     .benefits__desc {
         justify-content: center;
+        margin-top:0;
     }
 
     .benefits__button {

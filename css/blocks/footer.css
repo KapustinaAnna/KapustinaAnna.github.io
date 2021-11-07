@@ -2,9 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 3.7rem 0 7.5rem 0;
+    margin: 3.7rem 0 6rem 0;
 }
-
+.footer-list {
+    margin-top:0;
+}
 .footer__contacts {
     display: flex;
     align-items: flex-start;

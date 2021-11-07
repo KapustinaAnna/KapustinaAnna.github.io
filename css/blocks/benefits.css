@@ -15,6 +15,7 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-flow: row wrap;
+    margin-top: 2.5rem;
 }
 
 .benefits__text {
