@@ -1,8 +1,9 @@
 .menu__list {
     display: flex;
     justify-content: flex-start;
+    flex-flow: row wrap;
     align-items: flex-start;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
 }
 
 .menu {
@@ -11,7 +12,7 @@
 
 .menu__item {
     list-style: none;
-    margin-right: 30px;
+    margin-right: 1.875rem;
 
 }
 
@@ -23,4 +24,13 @@
     color: black;
     font-family: "Roboto Condensed";
     text-transform: uppercase;
+}
+
+.menu__link:active {
+    color: #E43225;
+}
+
+#nav-toggle,
+.nav-btn {
+    display: none;
 }

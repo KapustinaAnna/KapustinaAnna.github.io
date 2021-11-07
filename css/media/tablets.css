@@ -1,0 +1,321 @@
+@media (max-width: 768px) {
+    html {
+
+        font-size: 14px;
+    }
+
+    /*---burger-menu---*/
+    .nav-btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 10%;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .nav-btn>span,
+    .nav-btn>span::before,
+    .nav-btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+    }
+
+    .nav-btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .nav-btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .nav-btn+.menu__list {
+        z-index: 50;
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: 70%;
+        width: 30%;
+        height: 100%;
+        margin: 0;
+        padding: 2% 0;
+        list-style: none;
+        background-color: #fff;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 5px 15px;
+        color: #333;
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    #nav-toggle {
+        opacity: 0;
+    }
+
+    #nav-toggle:checked~.menu__list {
+        visibility: visible;
+        left: 0;
+    }
+
+    /*----guide--*/
+    .guide__content {
+        background: none;
+        padding: 1rem 0 3rem 0;
+    }
+
+    /*--process----*/
+    .process__content {
+        height: 100%;
+        padding-top: 0;
+    }
+
+    .process__tagline_1,
+    .process__tagline_2,
+    .process__tagline_3,
+    .process__tagline_4 {
+        margin: 0 0 1rem 0;
+
+    }
+
+    .process__tagline_1 {
+        background: url(../../img/chislo-1.png) top left no-repeat;
+        padding-left: 5rem;
+        order: 2;
+
+
+    }
+
+    .process__tagline_2 {
+        background: url(../../img/chislo.png) top left no-repeat;
+        padding-left: 5rem;
+        order: 1;
+
+    }
+
+    .process__tagline {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .tagline-left {
+        text-align: left;
+    }
+
+    /*---elements----*/
+    .column {
+        flex-flow: column;
+        justify-content: center;
+        margin-top: 1rem;
+
+    }
+
+    .col-left {
+        border-right: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+        width: 85%;
+    }
+
+    .col-right {
+        width: 85%;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.42;
+    }
+
+    /*----title----*/
+    .title {
+        margin-top: 0;
+    }
+
+    .title-desc {
+        padding: 5% 0 5% 20%;
+        font-size: 1.8rem;
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    .subtitle {
+        margin-left: 2rem;
+    }
+
+    /*-----benefits-----*/
+
+    .benefits {
+        background: #7224ea;
+    }
+
+    .benefits__col {
+        width: 85%;
+    }
+
+    .benefits__desc {
+        justify-content: center;
+    }
+
+    .benefits__button {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*---complexity---*/
+    .complexity__title {
+        width: 80%;
+    }
+
+    .myself__list {
+        padding-left: 15%;
+        padding-bottom: 10%;
+    }
+
+    .partner {
+        width: 100%;
+    }
+
+    .partner__list {
+        flex-flow: column;
+    }
+
+    .partner__item {
+        width: 90%;
+        margin: 1rem 0 1rem 2rem;
+    }
+
+    .partner__button {
+        margin-bottom: 2rem;
+    }
+
+    /*---clients---*/
+    .clients__desc {
+        justify-content: center;
+    }
+
+    .process__content {
+        background: none;
+        flex-flow: column;
+    }
+
+
+    /*-----achievement-----*/
+    .achievement__content {
+        padding-left: 2rem;
+        padding-right: 0;
+    }
+
+    .achievement__text {
+        background-position: center bottom 45%;
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        /*width:50%;*/
+        padding: 0 10% 5% 10%;
+    }
+
+    /*-------starting----------*/
+    .starting__list {
+        flex-flow: column;
+    }
+
+    .starting__item {
+        padding: 1.5rem 1.5rem 1.5rem 2rem;
+    }
+
+    .arrow,
+    .starting__item::after {
+        display: none;
+    }
+
+    /*---------feedback-----------*/
+    .feedback {
+        background: #014858;
+        padding-top: 2rem;
+    }
+
+    .feedback__bg {
+        margin-left: 10%;
+        ;
+    }
+
+    /*--------footer---------*/
+    .footer {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+
+    .footer__logo {
+        display: none;
+    }
+
+    .footer-list {
+        flex-flow: column;
+
+    }
+
+    .footer-list>li {
+        padding: 0.5rem 0 0.5rem 0;
+    }
+
+    .footer__menu {
+        margin-bottom: 1rem;
+
+    }
+
+    .footer__contacts {
+        flex-flow: column-reverse;
+        margin: 5.7rem 0 0.5rem 0;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .feedback-call {
+        margin-left: 2rem;
+    }
+
+    .socials {
+        margin-left: 6rem;
+    }
+
+    /*-------animate---------*/
+    .animate__animated {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+}

@@ -9,6 +9,7 @@
     counter-reset: num;
     margin-bottom: 0;
     padding-bottom: 3.125rem;
+
 }
 
 .starting__item {
@@ -42,15 +43,20 @@
     margin-right: -13px;
     margin-top: -1px;
 
+
 }
 
 .starting__item::after {
     content: '';
     width: 15px;
     height: 12px;
+    margin-top: -1px;
     border-top: 2px solid #fdfdfd;
     border-right: 2px solid #fbfbfc;
-    /* margin-right: 60px;*/
     transform: rotate(45deg);
 
+}
+
+.starting__item.no-arrow::after {
+    border: none;
 }

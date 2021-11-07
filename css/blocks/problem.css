@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-flow: row wrap;
     margin-top: 4.88rem;
     box-sizing: border-box;
 
@@ -12,25 +13,18 @@
     border-right: 1px solid black;
     width: 50%;
     padding-bottom: 7%;
-
 }
 
-.col-situation {
+.situation {
     background: url('../../img/Rectangle(1).png')top right no-repeat;
 }
 
-/*.situation-img {
-    background: url('../../img/Rectangle(1).png')top right no-repeat;
-    padding-bottom: 40%;
-    
-}
-*/
 .subtitle {
     z-index: 100;
 
 }
 
-.situation-text {
+.situation__text {
 
     padding-top: 50%;
     padding-left: 4rem;
@@ -39,24 +33,23 @@
 }
 
 .col-right {
-
     width: 40%;
-
 }
 
-.solution-text {}
-
-.solution-text__col {
+.solution__text_col {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 3.125rem;
 }
 
-
 .img-number {
     text-align: left;
     align-self: flex-end;
+}
+
+.img-number img {
+    max-width: 100%;
 }
 
 .description {

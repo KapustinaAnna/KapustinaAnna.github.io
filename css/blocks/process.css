@@ -4,6 +4,7 @@
 
 .process__content {
     background: url(../../img/process.png) center center no-repeat;
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -12,16 +13,16 @@
     height: 38.75rem;
 }
 
-.process-text {
+.process__tagline {
     display: inline-block;
 }
 
-.tagline {
+.tagline-left {
     text-align: right;
 
 }
 
-.tagline-1 {
+.process__tagline_1 {
     background: url(../../img/chislo-1.png) top right no-repeat;
     display: inline-block;
     width: 24.375rem;
@@ -30,16 +31,17 @@
     padding-right: 5rem;
 }
 
-.tagline-2 {
+.process__tagline_2 {
     background: url(../../img/chislo.png) top right no-repeat;
     display: inline-block;
     width: 24.375rem;
     height: 5rem;
     margin: 18rem 0 0 -8rem;
     padding-right: 5rem;
+
 }
 
-.tagline-3 {
+.process__tagline_3 {
     background: url(../../img/chislo-2.png) top left no-repeat;
     display: inline-block;
     width: 24.375rem;
@@ -50,11 +52,12 @@
 
 }
 
-.tagline-4 {
+.process__tagline_4 {
     background: url(../../img/chislo-3.png) top left no-repeat;
     display: inline-block;
     width: 24.375rem;
     height: 5rem;
     margin: 20rem 9rem 0 22rem;
     padding-left: 5rem;
+
 }

@@ -15,88 +15,92 @@
             <div class="container">
                 <header class="header">
                     <div class="header__menu">
-                        <div class="menu-logo">
-                            <h1 class="logo">Проводник</h1>
+                        <div class="header__logo">
+                            <h1 class="logo animate__animated animate__flip infinite">Проводник</h1>
                         </div>
-                        <div class="menu-content">
+                        
                             <nav class="menu">
+                                <input id="nav-toggle" type="checkbox" />
+                            <label class="nav-btn" for="nav-toggle">
+                                <span></span>
+                            </label>
                                 <ul class="menu__list">
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">услуги</a>
+                                    <li class="menu__item animate__animated animate__zoomHover">
+                                        <a href="#" class="menu__link ">услуги</a>
                                     </li>
-                                    <li class="menu__item">
+                                    <li class="menu__item animate__animated animate__zoomHover">
                                         <a href="#" class="menu__link">цены</a>
                                     </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">как это работает</a>
+                                    <li class="menu__item animate__animated animate__zoomHover">
+                                        <a href="#process" class="menu__link">как это работает</a>
                                     </li>
-                                    <li class="menu__item">
+                                    <li class="menu__item animate__animated animate__zoomHover">
                                         <a href="#" class="menu__link">блог</a>
                                     </li>
-                                    <li class="menu__item">
+                                    <li class="menu__item animate__animated animate__zoomHover">
                                         <a href="#" class="menu__link">о компании</a>
                                     </li>
-                                    <li class="menu__item">
+                                    <li class="menu__item animate__animated animate__zoomHover">
                                         <a href="#" class="menu__link">производителям</a>
                                     </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">проекты</a>
+                                    <li class="menu__item animate__animated animate__zoomHover">
+                                        <a href="#achievement" class="menu__link">проекты</a>
                                     </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">контакты</a>
+                                    <li class="menu__item animate__animated animate__zoomHover">
+                                        <a href="#contacts" class="menu__link">контакты</a>
                                     </li>
                                 </ul>
                             </nav>
 
-                        </div>
+                        
                     </div>
                     <div class="header__contacts">
                         <div class="location">
-                            <i class="icon-font ">&#xe803;</i>
+                            <i class="location__icon icon-font">&#xe803;</i>
                             г. Москва, ул. Улица, 20 с. 1
                         </div>
                         <div class="contacts">
-                            <div class="phone">
+                            <div class="contacts__phone">
                                 <i class="icon-font ">&#xe800;</i>8(123) 123-12-88
                             </div>
-                            <div class="email">info@provodnik.ru</div>
+                            <div class="contacts__email">info@provodnik.ru</div>
                         </div>
-                        <div class="feedback-col">
-                            <a href="#feedback" class="button call-btn">Обратный звонок</a>
+                        <div class="feedback-call">
+                            <a href="#feedback" class="feedback-call__button button">Обратный звонок</a>
                         </div>
                     </div>
                 </header>
                 <div class="guide__content">
-                    <div class="guide__content-text">
+                    <div class="guide__text">
                         <h2 class="title">зайди на</h2>
-                        <img src="img/aliexpress.png" alt="AliExpress">
-
+                        <img srcset="img/aliexpress.png 800w,img/aliexpressmin.png 320w"
+                       sizes="(max-width:320px) 300px,(max-width: 480px) 455px,
+                       800px"" alt="AliExpress">
                         <div class="guide__description">
                             Лучшее решение для небольших
                             интернет-магазинов и производителей
                         </div>
-                        <div>
+                        <div class="guide__button">
                             <a href="#feedback" class="button ">Хочу на AliExpress</a>
                         </div>
                     </div>
-                                    </div>
+                </div>
             </div>
         </section>
         <section class="section problem">
             <div class="container">
                 <div class="problem__col column">
-                    <div class="col-left col-situation">
-                        <h4 class="subtitle">Ситуация </h4>
-                        <div class="situation-text">
+                    <div class="situation col-left ">
+                        <div class="subtitle">Ситуация </div>
+                        <div class="situation__text">
                             Вы тратите много сил и денег на маркетинг и рекламу своих товаров.
                             Самые эффективные из каналов — дорогие и требуют большой работы.
                         </div>
                     </div>
-                    <div class="col-right col-solution">
-
-                        <div class="solution-text">
-                            <h4 class="subtitle">Решение </h4>
-                            <div class="solution-text__col">
+                    <div class="solution col-right ">
+                        <div class="solution__text">
+                            <div class="subtitle">Решение </div>
+                            <div class="solution__text_col">
                                 <div class="img-number">
                                     <img src="img/number1.png" alt="">
                                 </div>
@@ -109,8 +113,10 @@
                                         И опять же – не тратиться на маркетинг.</p>
                                 </div>
                             </div>
-                            <div class="solution-text__col">
-                                <img class="img-number" src="img/number2.png" alt="">
+                            <div class="solution__text_col">
+                                <div class="img-number">
+                                <img  src="img/number2.png" alt="">
+                                </div>
                                 <p class="description">Cоздать магазин на маркетплейсе AliExpress
                                     и реализовывать товары покупателям со всего мира. Один емкий и грамотный канал
                                     продаж заменит все рекламные инструменты, которыми вы пользовались до этого.
@@ -125,94 +131,85 @@
 
         </section>
         <section class="section benefits">
-            <div class="bg-benefits">
-                <div class="container ">
+              <div class="container ">
                     <div class="benefits__col">
                         <h3 class="title-desc">Что вы получите с магазином
                             на AliExpress?</h3>
-                        <div class="benefits-desc">
-                            <div class="benefits-text">
-                                <i class="icon-font icon-purple">&#xe802;</i>
+                        <div class="benefits__desc">
+                            <div class="benefits__text animate__animated animate__zoomHover">
+                                <i class="benefits__text_icon icon-font">&#xe802;</i>
                                 <div class="text">Снизите операционные расходы
                                     и расходы на маркетинг.
                                 </div>
                             </div>
-                            <div class="benefits-text">
-                                <i class="icon-font icon-purple">&#xe807;</i>
+                            <div class="benefits__text animate__animated animate__zoomHover">
+                                <i class="benefits__text_icon icon-font ">&#xe807;</i>
                                 <div class="text">Трафик из очень активных покупателей из регионов.
 
                                 </div>
                             </div>
-                            <div class="benefits-text">
-                                <i class="icon-font icon-purple">&#xe806;</i>
+                            <div class="benefits__text animate__animated animate__zoomHover">
+                                <i class="benefits__text_icon icon-font">&#xe806;</i>
                                 <div class="text">Сможете реализовывать продукцию в очень больших объемах.
                                 </div>
                             </div>
-                            <div class="benefits-text">
-                                <i class="icon-font icon-purple">&#xe808;</i>
+                            <div class="benefits__text animate__animated animate__zoomHover">
+                                <i class="benefits__text_icon icon-font ">&#xe808;</i>
                                 <div class="text">В 2020 году еще увеличите продажи за счет покупателей
                                     из стран СНГ.
 
                                 </div>
                             </div>
                         </div>
-                        <a href="#feedback" class="button btn-orange">Скачать предложение</a>
+                        <a href="#feedback" class="benefits__button button">Скачать предложение</a>
                     </div>
                 </div>
-            </div>
+            
         </section>
         <section class="section complexity">
             <div class="container">
-                <h3 class="title-desc title-black">Почему выходить на AliExpress самостоятельно сложно?</h3>
+                <h3 class="complexity__title title-desc ">Почему выходить на AliExpress самостоятельно сложно?</h3>
                 <div class="complexity__col column">
 
-                    <div class="col-left col-myself">
-                        <h4 class="subtitle title-myself">Самостоятельно </h4>
+                    <div class="myself col-left">
+                        <div class=" myself__title subtitle ">Самостоятельно </div>
                         <div class="description ">
-                            <ul class="myself-list">
-                                <li class="myself-item">Китайская площадка со сложными правилами и формулами.
+                            <ul class="myself__list">
+                                <li class="myself__item">Китайская площадка со сложными правилами и формулами.
                                 </li>
-                                <li class="myself-item">Ограниченные возможности без статуса технического партнера.
-
+                                <li class="myself__item">Ограниченные возможности без статуса технического партнера.
                                 </li>
-                                <li class="myself-item">Очень тяжело добиться высокого рейтинга магазинов и товаров –
-                                    <span class="myself-lead"> главного фактора в выдаче по запросу.</span>
-
+                                <li class="myself__item">Очень тяжело добиться высокого рейтинга магазинов и товаров –
+                                    <span class="myself__lead"> главного фактора в выдаче по запросу.</span>
                                 </li>
                             </ul>
-
-
                         </div>
                     </div>
-                    <div class="col-right col-partner">
-                        <div class="partner-text">
-                            <h4 class="subtitle title-partner">С техническим партнером Content Hub
-                            </h4>
-                            <div class="partner-text__col">
-                                <ul class="partner-list">
-                                    <li class="partner-item">Берем заключение договора на себя.
+                    <div class="partner col-right">
+                        <div class="partner__text">
+                            <div class="partner__title subtitle ">С техническим партнером Content Hub
+                            </div>
+                            <div class="partner__col">
+                                <ul class="partner__list">
+                                    <li class="partner__item">Берем заключение договора на себя.
                                     </li>
-                                    <li class="partner-item">Брендируем магазин.
-
+                                    <li class="partner__item">Брендируем магазин.
                                     </li>
-                                    <li class="partner-item">Коннектим магазин с вашей CRM.
-
+                                    <li class="partner__item">Коннектим магазин с вашей CRM.
                                     </li>
-                                    <li class="partner-item">Помогаем с описанием товаров.
-
+                                    <li class="partner__item">Помогаем с описанием товаров.
                                     </li>
-                                    <li class="partner-item">Создаем аккаунт.
-
+                                    <li class="partner__item">Создаем аккаунт.
                                     </li>
                                 </ul>
                             </div>
-                            <div class="partner-text__col">
-                                <i class="icon-font icon-big">&#xe804;</i>
-                                <span class="lead icon-lead">И главное — продвигаем в рейтинге на первые позиции в
+                            <div class="partner__col">
+                                <i class="partner__col_icon icon-font ">&#xe804;</i>
+                                <span class="partner__col_lead lead">И главное — продвигаем в рейтинге на первые позиции в
                                     выдаче. </span>
                             </div>
-                            <div class="">
-                                <a href="#feedback" class="button partner-btn">Написать нам</a>
+                            <div class="partner__button">
+                                <a href="#feedback" class="partner-btn button ">Написать нам</a>
                             </div>
                         </div>
 
@@ -224,59 +221,57 @@
             <div class="container bg-clients ">
                 <div class="clients__col">
                     <h3 class="title-desc">Кому интересно на AliExpress с Проводником?</h3>
-                    <div class="clients-desc">
-                        <div class="clients-text">
-                            <div class="icon-circle">
+                    <div class="clients__desc">
+                        <div class="row-clients">
+                            <div class="row-clients__icon">
                                 <i class="icon-font icon-yellow">&#xe80A;</i>
                             </div>
-                            <div class="text-clients">
-                                <h4 class="subtitle title-clients">Небольшим интернет-магазинам </h4>
+                            <div class="row-clients__text">
+                                <div class="subtitle title-clients">Небольшим интернет-магазинам </div>
                                 С ограниченными ресурсами и бюджетом
                                 на рекламу.
                             </div>
                         </div>
-                        <div class="clients-text">
-                            <div class="icon-circle">
+                        <div class="row-clients">
+                            <div class="row-clients__icon">
                                 <i class="icon-font icon-yellow">&#xe805;</i>
                             </div>
-                            <div class="text-clients">
-                                <h4 class="subtitle title-clients">Небольшим производителям </h4>
+                            <div class="row-clients__text">
+                                <div class="subtitle title-clients">Небольшим производителям </div>
                                 Готовы поставлять товар реселлеру и не хотят заниматься продвижением товаров конечному
                                 покупателю..
-
                             </div>
                         </div>
-
                     </div>
                 </div>
 
             </div>
 
         </section>
-        <section class="section process">
+        <section id="process" class="section process">
             <div class="container">
-                <h3 class="title-desc title-black">Как организован процесс?</h3>
+                <h3 class="process__title title-desc ">Как организован процесс?</h3>
                 <div class="process__content">
-                    <div class="process-text  tagline">
-                        <span class="tagline-1">
+                    <div class="process__tagline tagline-left ">
+                        <span class="process__tagline_1 animate__animated animate__slideInLeft2 ">
                             Представляет интересы мерчантов
                             и коммуницирует с площадкой по всем
                             установочным вопросам.
                         </span>
-                        <span class="tagline-2">
+                        <span class="process__tagline_2 animate__animated animate__slideInLeft1 ">
                             Проводник ищет магазины
                             и производителей и заводит
                             их на маркетплейс.
                         </span>
                     </div>
-                    <div class="process-text ">
-                        <span class="tagline-3">
+                    <div class="process__tagline  ">
+                        <span class="process__tagline_3 animate__animated animate__slideInRight1 ">
                             Ищет партнеров-реселлеров
                             при необходимости и помогает
                             наладить взаимодействие.
                         </span>
 
-                        <span class="tagline-4">
+                        <span class="process__tagline_4 animate__animated animate__slideInRight2 ">
                             Уже освоил алгоритм продвижения
                             магазина и готов его применить для
                             вашей раскрутки на маркетплейсе.
@@ -284,16 +279,18 @@
 
                     </div>
                 </div>
-                </div>
+            </div>
         </section>
-        <section class="section achievement">
-            <div class="container achievement-bg">
-                <h3 class="title-desc title-black title-width">Чего добились с Проводником
+        <section id="achievement" class="section achievement">
+            <div class="container achievement__bg">
+                <h3 class="achievement__title title-desc">Чего добились с Проводником
                     другие магазины?</h3>
-                <div class="achievement-content">
-                    <h4 class="subtitle achievement-subtitle">Кейс </h4>
-                    <div class="achievement-text">
-                        <div class="title-desc title-case">Продвижение и раскрутка магазина одежды</div>
+                <div class="achievement__content">
+                    <div class="achievement__subtitle subtitle ">Кейс </div>
+                    <div class="achievement__text">
+                        <div class="title-desc title-case">
+                            Продвижение и раскрутка магазина одежды
+                        </div>
                         Проводник ищет магазины и производителей и заводит их на маркетплейс. Уже освоил алгоритм
                         продвижения магазина и готов
                         его применить для вашей раскрутки на маркетплейсе.
@@ -319,7 +316,7 @@
         </section>
         <section class="section starting">
             <div class="container">
-                <h3 class="title-desc ">Как начать</h3>
+                <h3 class="title-desc">Как начать</h3>
                 <div class="starting__content">
                     <ol class="starting__list">
                         <li class="starting__item">Заполните
@@ -334,20 +331,18 @@
                             пакет услуг
                             <span class="arrow"></span>
                         </li>
-                        <li class="starting__item">Заключим
+                        <li class="starting__item  no-arrow">Заключим
                             договор.
-                            <span class="arrow"></span>
-                        </li>
+                              </li>
                     </ol>
                 </div>
             </div>
         </section>
         <section class="section feedback">
             <div class="container feedback__bg">
-                <div id="feedback"class="feedback__form">
+                <div id="feedback" class="feedback__form">
                     <h3 class="title-desc  title-case">Пожалуйста, оставьте свои контакты</h3>
                     <form action="#" class="form" method="post">
-
                         <div class="form__col">
                             <div class="form__item">
                                 <span class="subject">Имя</span>
@@ -356,12 +351,12 @@
                             </div>
                             <div class="form__item">
                                 <span class="subject">Телефон</span>
-                                <input type="phone" name="form-phone" class="form__input" placeholder="+7(123) 12-12-123"
+                                <input type="tel" name="form-phone" class="form__input" placeholder="+7(123) 12-12-123"
                                     required>
                             </div>
                             <div class="form__item">
                                 <span class="subject">E-mail*</span>
-                                <input type="email" name="form-email" class="form__input"  required
+                                <input type="email" name="form-email" class="form__input" required
                                     placeholder="Нужен для связи">
                             </div>
                             <div class="form__personal">
@@ -377,12 +372,14 @@
                                     <option class="option-occupation" value="" hidden disabled selected>Выберите род
                                         деятельности
                                     </option>
-                                    <option class="option-occupation">производство мужской одежды </option>
-                                    <option class="option-occupation">электроника </option>
-                                    <option class="option-occupation">женская одежда</option>
-                                    <option class="option-occupation">игрушки </option>
-                                    <option class="option-occupation">продажа телефонов</option>
-                                    <option class="option-occupation">аксессуары</option>
+                                    <option value="производство мужской одежды" class="option-occupation">производство
+                                        мужской одежды </option>
+                                    <option value="электроника" class="option-occupation">электроника </option>
+                                    <option value="женская одежда" class="option-occupation">женская одежда</option>
+                                    <option value="игрушки" class="option-occupation">игрушки </option>
+                                    <option value="продажа телефонов class=" option-occupation">продажа телефонов
+                                    </option>
+                                    <option value="аксессуары" class="option-occupation">аксессуары</option>
                                 </select>
                             </div>
                             <div class="form__item">
@@ -395,7 +392,7 @@
                                     placeholder="Input caption"></textarea>
                             </div>
                             <div class="form__button">
-                                <button class="button feedback-btn" type="submit" >Отправить</button>
+                                <button class="button feedback-btn" type="submit">Отправить</button>
                             </div>
 
                         </div>
@@ -403,48 +400,47 @@
                 </div>
             </div>
         </section>
-        <section class="section ">
+        <section id="contacts" class="section ">
             <div class="container">
                 <footer class="footer">
                     <div class="footer__menu">
-                        <div class="menu-logo">
-                            <h1 class="logo logo-small">Проводник</h1>
+                        <div class="footer__logo">
+                            <h1 class="logo footer__logo_small">Проводник</h1>
                         </div>
-                        <div class="menu-content">
                             <nav class="menu">
-                                <ul class="menu__list">
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">услуги</a>
+                                <ul class=" menu__list  footer-list">
+                                    <li class="menu__item animate__animated animate__zoomHover">
+                                        <a href="#" class="menu__link ">услуги</a>
                                     </li>
-                                    <li class="menu__item">
+                                    <li class="menu__item animate__animated animate__zoomHover">
                                         <a href="#" class="menu__link">цены</a>
                                     </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">как это работает</a>
+                                    <li class="menu__item animate__animated animate__zoomHover">
+                                        <a href="#process" class="menu__link">как это работает</a>
                                     </li>
-                                    <li class="menu__item">
+                                    <li class="menu__item animate__animated animate__zoomHover">
                                         <a href="#" class="menu__link">блог</a>
                                     </li>
-                                    <li class="menu__item">
+                                    <li class="menu__item animate__animated animate__zoomHover">
                                         <a href="#" class="menu__link">о компании</a>
                                     </li>
-                                    <li class="menu__item">
+                                    <li class="menu__item animate__animated animate__zoomHover">
                                         <a href="#" class="menu__link">производителям</a>
                                     </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">проекты</a>
+                                    <li class="menu__item animate__animated animate__zoomHover">
+                                        <a href="#achievement" class="menu__link">проекты</a>
                                     </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">контакты</a>
+                                    <li class="menu__item animate__animated animate__zoomHover">
+                                        <a href="#contacts" class="menu__link">контакты</a>
                                     </li>
                                 </ul>
                             </nav>
-                        </div>
+                        
                     </div>
                     <div class="footer__contacts">
                         <div class="rights">
-                                <span class="icon-copy">&copy;</span> 2018.
-                                <div class="copy-text">
+                            <span class="rights__icon">&copy;</span> 2018.
+                            <div class="rights__copy">
                                 Все права защищены.</div>
                         </div>
                         <div class="location">
@@ -452,19 +448,19 @@
                             г. Москва, ул. Улица, 20 с. 1
                         </div>
                         <div class="contacts">
-                            <div class="phone">
+                            <div class="contacts__phone">
                                 <i class="icon-font ">&#xe800;</i>8(123) 123-12-88
                             </div>
-                            <div class="email">info@provodnik.ru</div>
+                            <div class="contacts__email">info@provodnik.ru</div>
                         </div>
                         <div class="socials">
-                            <a href="#" ><i class="icon-font icon-facebook ">&#xe801;</i></a>
+                            <a href="#"><i class="socials__icon icon-font ">&#xe801;</i></a>
                         </div>
-                        <div class="feedback-col">
-                            <a href="#feedback" class="button call-btn">Обратный звонок</a>
+                        <div class="feedback-call">
+                            <a href="#feedback" class="feedback-call__button button" >Обратный звонок</a>
                         </div>
                     </div>
-                    </footer>
+                </footer>
             </div>
         </section>
     </div>

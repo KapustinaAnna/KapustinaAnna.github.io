@@ -1,9 +1,10 @@
-.achievement-bg {
+.achievement__bg {
     background: url('../../img/paket_mish.png') top right no-repeat;
     padding-bottom: 5rem;
+
 }
 
-.achievement-content {
+.achievement__content {
     background: white;
     border: 1px solid rgba(229, 229, 229, 0.6);
     box-sizing: border-box;
@@ -11,12 +12,15 @@
     margin-top: 5.25rem;
     padding: 0 3.125rem 3.125rem 6.25rem;
 }
-.pagination{
+
+.pagination {
     background: url('../../img/Group.svg') center no-repeat;
 }
-.achievement-text {
+
+.achievement__text {
     background: url('../../img/h_m.png') left center no-repeat;
     padding-left: 12.5rem;
+
 }
 
 .numbers {

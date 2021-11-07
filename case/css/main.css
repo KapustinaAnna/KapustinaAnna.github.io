@@ -1,0 +1,31 @@
+/*--setups--*/
+@import "style.css";
+@import "fonts.css";
+@import "header.css";
+@import "style.css";
+@import "animate.min.css";
+
+/*----blocks----*/
+@import "blocks/guide.css";
+@import "blocks/header.css";
+@import "blocks/menu.css";
+@import "blocks/logo.css";
+@import "blocks/contacts.css";
+@import "blocks/problem.css";
+@import "blocks/benefits.css";
+@import "blocks/complexity.css";
+@import "blocks/clients.css";
+@import "blocks/process.css";
+@import "blocks/achievement.css";
+@import "blocks/starting.css";
+@import "blocks/feedback.css";
+@import "blocks/footer.css";
+
+/*--elements----*/
+@import "elements/button.css";
+@import "elements/subtitle.css";
+@import "elements/column.css";
+
+/*--media---*/
+@import "media/phone.css";
+@import "media/tablets.css";

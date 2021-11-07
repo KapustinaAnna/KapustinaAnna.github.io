@@ -3,7 +3,7 @@
 @import "fonts.css";
 @import "header.css";
 @import "style.css";
-@import "style.css";
+@import "animate.min.css";
 
 /*----blocks----*/
 @import "blocks/guide.css";
@@ -25,3 +25,7 @@
 @import "elements/button.css";
 @import "elements/subtitle.css";
 @import "elements/column.css";
+
+/*--media---*/
+@import "media/phone.css";
+@import "media/tablets.css";

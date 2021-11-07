@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 4.7rem 0 7.5rem 0;
+    margin: 3.7rem 0 7.5rem 0;
 }
 
 .footer__contacts {
@@ -12,13 +12,14 @@
     justify-content: space-between;
     font-size: 0.875rem;
     padding-bottom: 3.8rem;
+    flex-flow: wrap;
 }
 
 .rights {
     margin-right: 5rem;
 }
 
-.copy-text {
+.rights__copy {
     margin-left: 2rem;
 }
 

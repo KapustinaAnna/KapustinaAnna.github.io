@@ -69,17 +69,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-purple {
+.benefits__text_icon {
   color: #651FFF;
   font-size: 2.3rem;
 
 }
 
-.icon-big {
+.partner__col_icon {
   font-size: 6.375rem;
 }
 
-.icon-copy {
+.rights__icon {
   font-size: 1.5rem;
   padding-right: 1rem;
 }
@@ -92,9 +92,13 @@
 
 }
 
-.icon-facebook {
+.socials__icon {
   color: black;
   font-size: 2rem;
+}
+
+.icon-facebook:hover {
+  color: #E43225;
 }
 
 [class^="icon-"]:before,
@@ -103,13 +107,12 @@
   font-style: normal;
   font-weight: normal;
   speak: never;
-
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  
+
 
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;

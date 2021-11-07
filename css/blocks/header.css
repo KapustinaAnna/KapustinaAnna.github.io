@@ -18,16 +18,20 @@
     text-align: right;
     margin-bottom: 0;
     text-transform: uppercase;
-}
 
+}
 
 .guide__description {
     font-size: 1.375rem;
     margin-bottom: 2rem;
 }
 
-.guide__content-text {
+.guide__text {
     width: 28.5rem;
+}
+
+.guide__text img {
+    max-width: 100%
 }
 
 .img-girl {

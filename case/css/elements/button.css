@@ -1,0 +1,41 @@
+.button {
+    background: url("../../img/btn2.svg") center center no-repeat;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    padding: 1rem 3.5rem 1rem 2.5rem;
+    font-size: 1.5rem;
+    color: white;
+
+}
+.button:active{
+    background: url("../../img/btn2activ.svg") center center no-repeat; ;
+}
+.feedback-call__button {
+    background: url("../../img/btn.svg") center center no-repeat;
+    font-size: 1.125rem;
+    padding: 0.8rem 1.8rem 0.8rem 1rem;
+}
+.feedback-call__button:active{
+    background: url("../../img/btnactive.svg") center center no-repeat; ;
+}
+.benefits__button {
+    background: url("../../img/btn3.svg") center center no-repeat;
+    padding: 1.5rem 3.125rem 1.5rem 2.75rem;
+}
+.btn-orange:active {
+    background: url("../../img/btn3.svg") center center no-repeat;
+    color:black;
+}
+.partner-btn {
+    
+    padding: 2.1rem 5rem 2.1rem 3.25rem;
+}
+
+.feedback-btn {
+    background: url("../../img/btn4.svg") center center no-repeat;
+    padding: 1rem 3.5rem 1rem 3rem;
+    border: none;
+}
+.feedback-btn:active {
+    background: url("../../img/btn4active.svg") center center no-repeat; 
+}

@@ -1,12 +1,8 @@
 .benefits {
-    background: #7224ea;
+    background:url('../../img/tel_krugi.png') right -70% top 10%no-repeat, #7224ea;
 
 }
 
-.bg-benefits {
-    background: url('../../img/tel_krugi.png') no-repeat;
-    background-position: right -40% top 10%;
-}
 
 .benefits__col {
     width: 70%;
@@ -14,14 +10,14 @@
 
 }
 
-.benefits-desc {
+.benefits__desc {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-flow: row wrap;
 }
 
-.benefits-text {
+.benefits__text {
     background-color: white;
     display: flex;
     justify-content: space-between;

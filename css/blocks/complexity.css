@@ -1,37 +1,37 @@
-.myself-list {
+.myself__list {
     padding-left: 1.5rem;
 }
 
-.myself-item {
+.myself__item {
     margin-bottom: 2.5rem;
     list-style-image: url(../../img/circle.png);
 
 }
 
-.myself-list li {
+.myself__list li {
     padding-left: 1.25rem;
 }
 
-.myself-lead {
+.myself__lead {
     font-weight: bold;
 }
 
-.col-myself {
+.myself {
     padding-bottom: 45%;
     background: url('../../img/notebook.png')bottom 25% right no-repeat;
-    width: 100%;
+    max-width: 100%;
 }
 
-.col-partner {
-    width: 100%;
+.partner {
+   
     padding-left: 5%;
 }
 
-.partner-text__col {
+.partner__col {
     margin-bottom: 4rem;
 }
 
-.partner-list {
+.partner__list {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -41,7 +41,7 @@
     padding: 0 2rem 0 2rem;
 }
 
-.partner-item {
+.partner__item {
     list-style-image: url(../../img/list.svg);
     margin-bottom: 2.5rem;
     width: 12rem;

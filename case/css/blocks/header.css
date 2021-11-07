@@ -1,0 +1,26 @@
+
+.header__contacts {
+    font-size: 0.875rem;
+    margin-left: 22%;
+}
+
+
+
+.title {
+    color: white;
+    font-size: 3.375rem;
+    text-align: right;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    
+}
+
+
+.guide__description {
+    font-size: 1.375rem;
+    margin-bottom: 2rem;
+}
+
+.guide__text {
+    width: 28.5rem;
+}
