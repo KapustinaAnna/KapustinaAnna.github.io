@@ -22,6 +22,7 @@
     display: inline-block;
     width: 30rem;
     color: black;
+    padding-bottom: 3.5rem;
    
 }
 .process__title {
@@ -53,8 +54,8 @@
 }
 
 .clients__title {
-    padding-top: 3.8rem;
-    padding-bottom: 4rem;
+    padding-top: 2.8rem;
+    padding-bottom: 2rem;
 }
 
 .title-clients {
@@ -62,11 +63,8 @@
     padding-left: 0;
 }
 
-
-
 .achievement__subtitle {
     background: url('../../img/Subtitle3.png')  left top 80% no-repeat;
-
     margin-top: -1.5rem;
 
 }

@@ -12,7 +12,7 @@
 
 .benefits__desc {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     flex-flow: row wrap;
     margin-top: 2.5rem;

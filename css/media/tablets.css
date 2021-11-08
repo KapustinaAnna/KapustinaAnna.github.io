@@ -236,9 +236,12 @@
         display: flex;
         justify-content: center;
         flex-flow: column;
-        /*width:50%;*/
+        
         padding: 0 10% 5% 10%;
     }
+    .numbers {
+    margin-top: 10%;
+}
 
     /*-------starting----------*/
     .starting__list {
