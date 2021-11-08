@@ -1,12 +1,13 @@
 .subtitle {
-    background: url('../../img/Subtitle.png') no-repeat;
-
+    background: url('../../img/Subtitle.png') left top 70% no-repeat;
     color: white;
     font-weight: bold;
     font-size: 1.125rem;
-    padding: 0.5rem 0 0.5rem 1.4rem;
+    padding: 1.5rem 0 0.5rem 1.4rem;
 
 }
+
+
 
 .title-desc {
     color: white;
@@ -17,7 +18,12 @@
     padding-bottom: 5rem;
     margin: 0;
 }
-
+.achievement__title {
+    display: inline-block;
+    width: 30rem;
+    color: black;
+   
+}
 .process__title {
     color: black;
     padding-bottom: 0;
@@ -26,20 +32,29 @@
 .lead {
     font-size: 1rem;
     font-weight: bold;
-}       
+}
 
 .myself__title {
-    background: url('../../img/Subtitle1.png') no-repeat;
-
+    background: url('../../img/Subtitle1.png')left 2% top 80% no-repeat;
+    margin-top: -0.8rem;
+    margin-left: 5.5rem;
+    margin-bottom: 3rem;
 }
 
 .partner__title {
-    background: url('../../img/Subtitle2.png') no-repeat;
-    margin-bottom: 1rem;
+    background: url('../../img/Subtitle2.png') left 2% top 80% no-repeat;
+    margin-top: -0.8rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .partner__col_lead {
     font-size: 1.25rem;
+}
+
+.clients__title {
+    padding-top: 3.8rem;
+    padding-bottom: 4rem;
 }
 
 .title-clients {
@@ -47,14 +62,10 @@
     padding-left: 0;
 }
 
-.achievement__title {
-    display: inline-block;
-    width: 30rem;
-    color: black;
-}
+
 
 .achievement__subtitle {
-    background: url('../../img/Subtitle3.png') no-repeat;
+    background: url('../../img/Subtitle3.png')  left top 80% no-repeat;
 
     margin-top: -1.5rem;
 
@@ -67,7 +78,7 @@
 .title-case {
     font-size: 2.25rem;
     color: black;
-    padding: 3.125rem 0 3.125rem 0;
+    padding: 2rem 0 3.125rem 0;
 }
 
 .title-width {

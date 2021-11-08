@@ -26,7 +26,7 @@
   /*-------partner--------*/
   .myself {
 
-    background: url('../../img/notebookphone.png')bottom 25% right no-repeat;
+    background: url('../../img/notebookphone.png')bottom 5% right no-repeat;
 
   }
 
@@ -92,10 +92,15 @@
     box-sizing: border-box;
     width: 70%;
   }
-
-  /*----problem-----*/
+  .nav-btn+.menu__list {
+  width:45% !important; 
+  }
+      /*----problem-----*/
   .situation {
-    background: url('../../img/Rectanglephone2.png')top right no-repeat;
+    background: url('../../img/Rectanglephone2.png')top 25% right no-repeat;
+  }
+  .situation__text {
+    padding-top: 80%;
   }
 
   .big-numbers {
@@ -123,15 +128,20 @@
 
   /*----partner--------*/
   .myself {
-    background: url('../../img/notebookphone2.png')bottom 5% right no-repeat;
+    background: url('../../img/notebookphone2.png') bottom 5% right no-repeat;
   }
-
+  .myself__list {
+     padding-bottom: 30%!important;
+}
   .partner {
     padding-right: 5%;
     width: 100%;
     padding-left: 0;
   }
-
+/*-starting---*/
+.starting__item {
+  background-position: left top 20%;
+}
   /*-----feedback-----*/
 
   .form {

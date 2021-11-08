@@ -6,13 +6,13 @@
 .feedback__bg {
     background: white;
     box-sizing: border-box;
-    padding: 1.57rem 0rem 4rem 4rem;
+    padding: 2.5rem 0rem 4rem 4rem;
     width: 80%;
 }
 
 .feedback__form {
     background: url('../../img/krugfb.png') no-repeat;
-    padding: 0 10.375rem 0 4.375rem;
+    padding: 0 8.375rem 0 8.375rem;
 
 }
 

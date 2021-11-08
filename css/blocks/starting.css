@@ -8,15 +8,16 @@
     align-items: flex-start;
     counter-reset: num;
     margin-bottom: 0;
+    margin-top:0;
     padding-bottom: 3.125rem;
 
 }
 
 .starting__item {
-    background: url('../../img/numberlist.png') left no-repeat;
+    background: url('../../img/numberlist.png') left top -4% no-repeat;
     list-style: none;
     color: white;
-    padding: 3rem 3rem 3rem 1.5rem;
+    padding: 0.2rem 3rem 3rem 1.5rem;
     display: flex;
     align-items: center;
 

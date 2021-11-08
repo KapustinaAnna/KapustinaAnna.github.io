@@ -1,6 +1,3 @@
-.complexity__col {
-    margin-top:0;
-}
 .myself__list {
     padding-left: 6rem;
 }
@@ -20,14 +17,13 @@
 }
 
 .myself {
-    padding-bottom: 45%;
-    background: url('../../img/notebook.png')bottom 25% right no-repeat;
+    padding-bottom: 35%;
+    background: url('../../img/notebook.png')bottom 23% right no-repeat;
     max-width: 100%;
 }
 
 .partner {
-   
-    padding-left: 5%;
+    width: 45%;
 }
 
 .partner__col {
