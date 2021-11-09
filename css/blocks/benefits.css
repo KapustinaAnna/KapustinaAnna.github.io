@@ -1,8 +1,16 @@
 .benefits {
-    background:url('../../img/tel_krugi.png') right -70% top 10%no-repeat, #7224ea;
+    background: #7224ea;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
 
 }
-
+.benefits::after {
+    content:'';
+    background:url('../../img/tel_krugi.png'); /*right -70% top 10%no-repeat;*/
+    width:50rem;
+    height:50rem;
+}
 
 .benefits__col {
     width: 70%;

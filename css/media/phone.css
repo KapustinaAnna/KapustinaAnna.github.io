@@ -7,13 +7,18 @@
   .header__contacts {
     display: none;
   }
-
+  .guide__description {
+    box-sizing: border-box;
+    width: 80%;
+  }
   /*-----elements------*/
   .title__desc {
     font-size: 1.5rem;
     line-height: 1.42;
   }
-
+  .title {
+    text-align: left;
+  }
   .description {
     width: 100%;
   }
@@ -25,9 +30,7 @@
 
   /*-------partner--------*/
   .myself {
-
     background: url('../../img/notebookphone.png')bottom 5% right no-repeat;
-
   }
 
   .partner__title {
@@ -59,9 +62,24 @@
 
   /*-------feedback--------*/
   .feedback__form {
-    padding: 0;
+    padding: 3rem;
+  }
+  .feedback__bg {
+    padding-left: 1rem;
+  }
+  select {
+    font-size: 80%;
   }
 
+  .form__personal {
+    width: 16.3rem;
+}
+.form__textarea {
+  width: 16rem;
+}
+.form__button {
+  margin-left: 1.5rem;
+}
   /*------footer---------*/
   .footer-list {
     display: none;

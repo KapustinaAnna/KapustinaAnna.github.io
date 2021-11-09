@@ -262,10 +262,16 @@
         background: #014858;
         padding-top: 2rem;
     }
-
+    .title-case {
+        padding:0;
+    }
     .feedback__bg {
         margin-left: 10%;
-        ;
+        
+    }
+    .feedback__form {
+        padding: 0;
+
     }
 
     /*--------footer---------*/
