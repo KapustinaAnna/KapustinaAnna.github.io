@@ -168,7 +168,9 @@
     .benefits {
         background: #7224ea;
     }
-
+    .benefits__bg {
+        background: none;
+    }
     .benefits__col {
         width: 85%;
     }

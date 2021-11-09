@@ -6,7 +6,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-flow: row wrap;
     counter-reset: num;
     margin-bottom: 0;
     margin-top:0;

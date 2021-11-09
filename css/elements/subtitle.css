@@ -23,6 +23,7 @@
     width: 30rem;
     color: black;
     padding-bottom: 3.5rem;
+    padding-top:3.5rem;
    
 }
 .process__title {
@@ -67,7 +68,7 @@
 
 .achievement__subtitle {
     background: url('../../img/Subtitle3.png')  left top 80% no-repeat;
-    margin-top: -1.5rem;
+    margin-top: -2.5rem;
 
 }
 

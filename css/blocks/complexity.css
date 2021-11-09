@@ -19,7 +19,7 @@
 .myself::after {
     content:"";
         padding-bottom: 60%;
-        background: url('../../img/notebook.png') bottom 50% right no-repeat ;
+        background: url('../../img/notebook.png') bottom 70% right no-repeat ;
     display:block;
     
 }
@@ -47,4 +47,5 @@
     list-style-image: url(../../img/list.svg);
     margin-bottom: 2.5rem;
     width: 12rem;
+    font-size: 0.875rem;
 }
