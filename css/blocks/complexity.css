@@ -4,7 +4,7 @@
 
 .myself__item {
     margin-bottom: 2.5rem;
-    list-style-image: url(../../img/circle.png);
+    list-style-image: url('../../img/circle.png');
 
 }
 
@@ -16,10 +16,12 @@
     font-weight: bold;
 }
 
-.myself {
-    padding-bottom: 35%;
-    background: url('../../img/notebook.png')bottom 23% right no-repeat;
-    max-width: 100%;
+.myself::after {
+    content:"";
+        padding-bottom: 60%;
+        background: url('../../img/notebook.png') bottom 50% right no-repeat ;
+    display:block;
+    
 }
 
 .partner {
@@ -28,6 +30,7 @@
 
 .partner__col {
     margin-bottom: 4rem;
+    display: flex;
 }
 
 .partner__list {

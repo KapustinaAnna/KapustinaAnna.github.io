@@ -29,12 +29,11 @@
   }
 
   /*-------partner--------*/
-  .myself {
+  .myself::after {
     background: url('../../img/notebookphone.png')bottom 5% right no-repeat;
   }
-
-  .partner__title {
-    font-size: 0.8rem;
+  .myself__list {
+    padding-bottom: 0;
   }
 
   /*------process-------*/
@@ -145,11 +144,11 @@
   }
 
   /*----partner--------*/
-  .myself {
+  .myself::after {
     background: url('../../img/notebookphone2.png') bottom 5% right no-repeat;
   }
   .myself__list {
-     padding-bottom: 30%!important;
+     padding-bottom: 0!important;
 }
   .partner {
     padding-right: 5%;

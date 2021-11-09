@@ -16,7 +16,8 @@
 }
 
 .situation {
-    background: url('../../img/Rectangle(1).png')top right no-repeat;
+   background: url('../../img/Rectangle(1).png')top right no-repeat;
+   background-size:auto, auto,cover;
 }
 
 .subtitle {
@@ -28,8 +29,7 @@ margin-top:2rem;
 display: block;
 }
 .situation__text {
-
-    padding-top: 50%;
+    padding-top: 19rem;
     padding-left: 4rem;
     font-size: 1.125rem;
     line-height: 1.75rem;

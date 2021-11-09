@@ -51,6 +51,8 @@
 
 .partner__col_lead {
     font-size: 1.25rem;
+    margin-top: 1rem;
+    display: inline-block;
 }
 
 .clients__title {
