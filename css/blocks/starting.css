@@ -19,7 +19,7 @@
     color: white;
     padding: 0.2rem 3rem 3rem 1.5rem;
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
 
 }
 
@@ -31,6 +31,9 @@
     font-family: Roboto Condensed;
     font-size: 1.5rem;
     font-weight: 700;
+    display:block;
+    margin-top:0.375rem;
+
 }
 
 .arrow {
@@ -42,7 +45,7 @@
     height: 2px;
     background: white;
     margin-right: -13px;
-    margin-top: -1px;
+    margin-top: 20px;
 
 
 }
@@ -51,7 +54,7 @@
     content: '';
     width: 15px;
     height: 12px;
-    margin-top: -1px;
+    margin-top: 15px;
     border-top: 2px solid #fdfdfd;
     border-right: 2px solid #fbfbfc;
     transform: rotate(45deg);

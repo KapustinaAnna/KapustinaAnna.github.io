@@ -39,7 +39,7 @@ display: block;
     width: 40%;
 }
 
-.solution__text_col {
+.solution__col {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

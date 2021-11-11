@@ -13,7 +13,7 @@
     --animate-repeat: 1
 }
 
-.animate__animated {
+.animate {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-duration: var(--animate-duration);
@@ -2807,7 +2807,7 @@ print {
     }
 }
 
-.animate__animated.animate__flip {
+.animate__animated.animate-flip {
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
     -webkit-animation-name: flip;
@@ -3779,10 +3779,10 @@ print {
     -webkit-animation-name: zoomIn;
     animation-name: zoomIn
 }
-.animate__zoomHover {
+.animate-zoomHover {
     transition: 0.5s;
 }
-.animate__zoomHover:hover {
+.animate-zoomHover:hover {
     transform: scale(1.2); 
 }
 
@@ -4201,7 +4201,7 @@ print {
     }
 }
 
-.animate__slideInLeft1 {
+.animate-slideInLeft1 {
     -webkit-animation-name: slideInLeft;
     animation-name: slideInLeft;
     animation-iteration-count: infinite;
@@ -4209,7 +4209,7 @@ print {
     /*animation-delay: 2s;*/
    
 }
-.animate__slideInLeft2 {
+.animate-slideInLeft2 {
     -webkit-animation-name: slideInLeft;
     animation-name: slideInLeft;
     animation-iteration-count: infinite;
@@ -4244,7 +4244,7 @@ print {
     }
 }
 
-.animate__animated.animate__slideInRight1 {
+.animate.animate-slideInRight1 {
     -webkit-animation-name: slideInRight;
     animation-name: slideInRight;
     animation-iteration-count: infinite;
@@ -4253,7 +4253,7 @@ print {
     
 
 }
-.animate__slideInRight2{
+.animate-slideInRight2{
     -webkit-animation-name: slideInRight;
     animation-name: slideInRight;
     animation:slideInRight 8s ease-in-out infinite;

@@ -73,7 +73,7 @@
   .form__personal {
     width: 16.3rem;
 }
-.form__textarea {
+.form-textarea {
   width: 16rem;
 }
 .form__button {
@@ -159,6 +159,8 @@
 .starting__item {
   background-position: left top 20%;
 }
+
+
   /*-----feedback-----*/
 
   .form {
@@ -177,7 +179,7 @@
     padding-left: 0;
   }
 
-  .form__textarea {
+  .form-textarea {
     width: 15rem;
   }
 

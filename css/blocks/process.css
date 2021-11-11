@@ -22,7 +22,7 @@
 
 }
 
-.process__tagline_1 {
+.tagline-left__1 {
     background: url(../../img/chislo-1.png) top right no-repeat;
     display: inline-block;
     width: 24.375rem;
@@ -31,7 +31,7 @@
     padding-right: 5rem;
 }
 
-.process__tagline_2 {
+.tagline-left__2 {
     background: url(../../img/chislo.png) top right no-repeat;
     display: inline-block;
     width: 24.375rem;
@@ -41,7 +41,7 @@
 
 }
 
-.process__tagline_3 {
+.tagline-right__3 {
     background: url(../../img/chislo-2.png) top left no-repeat;
     display: inline-block;
     width: 24.375rem;
@@ -52,7 +52,7 @@
 
 }
 
-.process__tagline_4 {
+.tagline-right__4 {
     background: url(../../img/chislo-3.png) top left no-repeat;
     display: inline-block;
     width: 24.375rem;

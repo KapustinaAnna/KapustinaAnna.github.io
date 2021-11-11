@@ -80,9 +80,10 @@
         background: none;
         padding: 1rem 0 3rem 0;
     }
+
     /*--problem---*/
     .situation__lead {
-        margin-top:0rem; 
+        margin-top: 0rem;
     }
 
     /*--process----*/
@@ -91,15 +92,15 @@
         padding-top: 0;
     }
 
-    .process__tagline_1,
-    .process__tagline_2,
-    .process__tagline_3,
-    .process__tagline_4 {
+    .tagline-left__1,
+    .tagline-left__2,
+    .tagline-right__3,
+    .tagline-right__4 {
         margin: 0 0 1rem 0;
 
     }
 
-    .process__tagline_1 {
+    .tagline-left__1 {
         background: url(../../img/chislo-1.png) top left no-repeat;
         padding-left: 5rem;
         order: 2;
@@ -107,7 +108,7 @@
 
     }
 
-    .process__tagline_2 {
+    .tagline-left__2 {
         background: url(../../img/chislo.png) top left no-repeat;
         padding-left: 5rem;
         order: 1;
@@ -168,16 +169,18 @@
     .benefits {
         background: #7224ea;
     }
+
     .benefits__bg {
         background: none;
     }
+
     .benefits__col {
         width: 85%;
     }
 
     .benefits__desc {
         justify-content: center;
-        margin-top:0;
+        margin-top: 0;
     }
 
     .benefits__button {
@@ -189,16 +192,20 @@
     .complexity__title {
         width: 80%;
     }
- .myself {
-     background-position: bottom 15% right;
- }
+
+    .myself {
+        background-position: bottom 15% right;
+    }
+
     .myself__list {
         padding-left: 15%;
         padding-bottom: 10%;
     }
-   .my-self__title {
-    margin-bottom: 0;
-   }
+
+    .my-self__title {
+        margin-bottom: 0;
+    }
+
     .partner {
         width: 100%;
     }
@@ -212,7 +219,7 @@
         margin: 1rem 0 1rem 2rem;
     }
 
-    .partner__button {
+    .partner-btn {
         margin-bottom: 2rem;
     }
 
@@ -238,12 +245,13 @@
         display: flex;
         justify-content: center;
         flex-flow: column;
-        
+
         padding: 0 10% 5% 10%;
     }
+
     .numbers {
-    margin-top: 10%;
-}
+        margin-top: 10%;
+    }
 
     /*-------starting----------*/
     .starting__list {
@@ -252,6 +260,10 @@
 
     .starting__item {
         padding: 1.5rem 1.5rem 1.5rem 2rem;
+    }
+
+    .starting__item:before {
+        margin-top: 0;
     }
 
     .arrow,
@@ -264,13 +276,16 @@
         background: #014858;
         padding-top: 2rem;
     }
+
     .title-case {
-        padding:0;
+        padding: 0;
     }
+
     .feedback__bg {
         margin-left: 10%;
-        
+
     }
+
     .feedback__form {
         padding: 0;
 
@@ -318,7 +333,7 @@
     }
 
     /*-------animate---------*/
-    .animate__animated {
+    .animate {
         /*CSS transitions*/
         -o-transition-property: none !important;
         -moz-transition-property: none !important;

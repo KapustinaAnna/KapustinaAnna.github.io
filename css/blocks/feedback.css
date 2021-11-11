@@ -30,7 +30,9 @@
     display: block;
 
 }
-
+.form_item input,textarea,select {
+      background: none;
+} 
 .subject {
     display: block;
     color: #0000008A;
@@ -51,16 +53,18 @@
 }
 
 .form__input::placeholder {
-    color: #4b4a4a;
+    color: rgba(0, 0, 0, 0.9);
     line-height: 1.5;
     font-size: 16px;
 }
 
-.form__textarea {
+
+.form-textarea {
     width: 19rem;
     height: 1.5rem;
     resize: none;
-
+    color: rgba(0, 0, 0, 0.9);
+    
 }
 
 .form__personal {
@@ -90,7 +94,9 @@
 .form__caption {
     border-bottom: 2px solid #651FFF;
 }
-
+.option-occupation {
+    color: rgba(0, 0, 0, 0.9);
+}
 .form__button {
     margin: 2rem 0 0 7.5rem;
     border: none;

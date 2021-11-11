@@ -69,13 +69,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.benefits__text_icon {
+.text-icon {
   color: #651FFF;
   font-size: 2.3rem;
 
 }
 
-.partner__col_icon {
+.partner-icon {
   font-size: 6rem;
   margin-top: 1rem;
 }
