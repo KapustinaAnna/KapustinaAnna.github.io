@@ -2,8 +2,8 @@
 site_name: RestoBook Docs
 
 # Repository
-repo_name: solopov-av-edu/RestoBook-Docs
-repo_url: https://github.com/solopov-av-edu/RestoBook-Docs
+repo_name: KapustinaAnna/KapustinaAnna.github.io
+repo_url: https://github.com/KapustinaAnna/KapustinaAnna.github.io
 
 theme:
   custom_dir: 'theme'
