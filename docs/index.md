@@ -1,6 +1,2 @@
----
-template: home.html
-title: Material for MkDocs
----
-
-Welcome to Material for MkDocs.
+# Разработка приложения для инвентаризации, автозаказа и контроля сроков хранения продуктов
+[Документация](/general%20info)
