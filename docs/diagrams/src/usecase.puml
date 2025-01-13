@@ -66,12 +66,12 @@ MP-->UR2
 AP<--AP0 #line.dashed; :include
 AP<--AP2 #line.dashed; :extend
 AP0<--AP1 #line.dashed; :extend
-AP0<--AP3 #line.dashed; :include
+AP0<--AP3 #line.dashed; :extend
 AP3<--AP4 #line.dashed; :include
 
 
 KS<--KS1#line.dashed; :include 
-KS1<--KS2#line.dashed; :include
+KS1<--KS2#line.dashed; :extend
 
 
 UC1<--UC6 #line.dashed; :include 
