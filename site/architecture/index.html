@@ -166,9 +166,20 @@
 <tr><td valign="top">Mobile App</td><td valign="top">Container</td><td valign="top">Mobile App</td><td valign="top">Мобильное приложение для оформления заказов и доступа к данным о продуктах.</td><td valign="top">Отправляет запросы через API Gateway к микросервисам.</td></tr>
 <tr><td valign="top">Terminal</td><td valign="top">Container</td><td valign="top">Terminal</td><td valign="top">Терминал для заказа поставщикам и доступа к данным о продуктах.</td><td valign="top">Взаимодействует с API Gateway для оформления заказов.</td></tr>
 <tr><td valign="top">Service Web</td><td valign="top">Container</td><td valign="top">Service Web</td><td valign="top">Веб-приложение для инвентаризации и заказов у поставщиков.</td><td valign="top">Работает через API Gateway для получения и отправки информации.</td></tr>
-<tr><td rowspan="2" valign="top">Микросервис регистрации сотрудников</td><td valign="top">Container</td><td valign="top">Auth</td><td valign="top">Сервис регистрации и аутентификации сотрудников.</td><td valign="top">Взаимодействует с Auth database для сохранения и извлечения данных.</td></tr>
-<tr><td valign="top">Container</td><td valign="top">Auth Database</td><td valign="top">Хранит данные регистрации пользователей.</td><td valign="top">Чтение и запись данных регистрации.</td></tr>
+
+<tr><td rowspan="2" valign="top">Микросервис авторизации пользователей</td><td valign="top">Container</td><td valign="top">Auth</td><td valign="top">Сервис авторизации пользователей.</td><td valign="top">Взаимодействует с Auth database для сохранения и извлечения данных.</td></tr>
+
+<tr><td valign="top">Container</td><td valign="top">Auth Database</td><td valign="top">Хранит данные авторизации пользователей.</td><td valign="top">Чтение и запись данных авторизации.</td></tr>
+<tr><td rowspan="2" valign="top">Микросервис пользователи</td><td valign="top">Container</td><td valign="top">Users</td><td valign="top">Сервис пользователей.</td><td valign="top">Взаимодействует с Users database для сохранения и извлечения данных.</td></tr>
+<tr><td valign="top">Container</td><td valign="top">Users Database</td><td valign="top">Хранит данные пользователей.</td><td valign="top">Чтение и запись данных пользователей.</td></tr>
+
+
+
+
 <tr><td rowspan="2" valign="top">Микросервис  продукты</td><td valign="top">Container</td><td valign="top">Product</td><td valign="top">Сервис работы с данными о продуктах.</td><td valign="top">Взаимодействует с Product database для хранения информации о продуктах.</td></tr>
+
+
+
 <tr><td valign="top">Container</td><td valign="top">Product Database</td><td valign="top">Хранит информацию о продуктах.</td><td valign="top">Чтение и запись данных о продуктах.</td></tr>
 <tr><td rowspan="2" valign="top">Микросервис заказов поставщикам</td><td valign="top">Микросервис</td><td valign="top">Orders</td><td valign="top">Сервис обработки заказов от поставщиков.</td><td valign="top">Взаимодействует с Orders database для хранения данных о заказах.</td></tr>
 <tr><td valign="top">База данных</td><td valign="top">Orders Database</td><td valign="top">Хранит информацию о заказах.</td><td valign="top">Чтение и запись данных о заказах.</td></tr>
@@ -222,55 +233,61 @@
 <td style="text-align: left;">API Gateway</td>
 <td style="text-align: left;">Reservation</td>
 <td style="text-align: left;">Бронь на продукты</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">API Gateway</td>
 <td style="text-align: left;">1C_Service</td>
 <td style="text-align: left;">Заказы поставщикам</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">API Gateway</td>
 <td style="text-align: left;">Inventory</td>
 <td style="text-align: left;">Инвентаризация продуктов</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">API Gateway</td>
 <td style="text-align: left;">Auth</td>
-<td style="text-align: left;">Регистрация пользователя</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">Авторизация пользователя</td>
+<td style="text-align: left;">REST/HTTPS</td>
+</tr>
+<tr>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">Users</td>
+<td style="text-align: left;">Данные пользователя</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">API Gateway</td>
 <td style="text-align: left;">Product</td>
 <td style="text-align: left;">Данные по продуктам</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">API Gateway</td>
 <td style="text-align: left;">Orders</td>
 <td style="text-align: left;">Информация о заказах поставщикам</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">Reservation</td>
 <td style="text-align: left;">Роботы</td>
 <td style="text-align: left;">Информация о бронированных продуктах для блюда</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">1C_Service</td>
 <td style="text-align: left;">1C</td>
 <td style="text-align: left;">Информация о заказах поставщикам для сервера заказа</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">1C_Service</td>
 <td style="text-align: left;">Mixcart</td>
 <td style="text-align: left;">Заказ продуктов у поставщиков</td>
-<td style="text-align: left;">REST/HTTP</td>
+<td style="text-align: left;">REST/HTTPS</td>
 </tr>
 <tr>
 <td style="text-align: left;">Auth</td>

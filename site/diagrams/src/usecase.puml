@@ -1,10 +1,10 @@
 @startuml
 left to right direction
-
+actor "Клиент ресторана" as K
 actor "Менеджер по ассортименту" as MS
 actor "Менеджер пополнения" as MP
 actor Технолог as T
-actor "Система заказа" as R
+
 rectangle Заказ {
 
 usecase "Автозаказ продуктов" as AP
@@ -23,12 +23,14 @@ usecase "Собрать заказ" as RZ1
 }
 rectangle "Работа с продуктами"  {
 usecase "Просмотреть наличие продуктов" as PP
-
-
+usecase "Потратить продукт" as KS5
+usecase "Заказать блюдо" as KS4
 usecase "Контроль срока годности" as KS
 usecase "Просмотреть информацию о сроках годности" as KS1
 usecase "Списать продукт" as KS2
-usecase "Потратить продукт" as KS3
+
+
+
 
 
 usecase "Инвентаризация" as UC1
@@ -40,29 +42,29 @@ usecase "Просмотреть информацию о продукте" as UC6
 
 rectangle "Работа с правами"  {
 usecase "Регистрация пользователя" as UR1
-usecase "Аутенфикация пользователя" as UR2
-}
 
+}
+K-->KS4
 MS-->PP
 MS-->UR1
-MS-->UR2
+
 
 
 
 T-->AP
 T-->RZ
 T-->UR1
-T-->UR2
+
 T-->KS
 
 MP-->AP
 MP-->KS 
-R-->KS3
+
 MP-->UC1
 MP-->RZ
 MP-->UR1
-MP-->UR2
 
+KS5<--KS4#line.dashed; :include
 AP<--AP0 #line.dashed; :include
 AP<--AP2 #line.dashed; :extend
 AP0<--AP1 #line.dashed; :extend
@@ -74,6 +76,7 @@ KS<--KS1#line.dashed; :include
 KS1<--KS2#line.dashed; :extend
 
 
+UC1<--PP #line.dashed; :include 
 UC1<--UC6 #line.dashed; :include 
 UC6<--UC4 #line.dashed; :extend
 UC6<--UC2#line.dashed; :extend

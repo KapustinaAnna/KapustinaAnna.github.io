@@ -1,5 +1,4 @@
-@startuml Architecture
-
+@startuml
 !include <C4/C4_Container>
 skinparam Linetype polyline
 
@@ -20,11 +19,16 @@ Container(service, "Service web", "ASP.NET", "Веб-приложение для
    
    
     
-    Boundary(msBookingTable, "Микросервис регистрации сотрудников"){
-        Container(Auth, "Auth", "C#, .NET", "Сервис регистрации сотрудников")
-        ContainerDb(dbAuth, "Auth database", "PostgreSQL", "Хранение данных регистрации пользователей")
+    Boundary(msAuth, "Микросервис авторизации пользователей"){
+        Container(Auth, "Auth", "C#, .NET", "Сервис авторизации пользователей")
+        ContainerDb(dbAuth, "Auth database", "PostgreSQL", "Хранение данных авторизации пользователей")
     }
 
+    
+    Boundary(msUsers, "Микросервис пользователи"){
+        Container(Users, "Users", "C#, .NET", "Сервис пользователb")
+        ContainerDb(dbUsers, "Users database", "PostgreSQL", "Хранение данных  пользователей")
+    }
     Boundary(msProduct, "Микросервис  продукты") {
         Container(Product, "Product", "C#, .NET", "Сервис работы с данными о продуктах")
         ContainerDb(dbProduct, "Product database", "PostgreSQL", "Хранение данных о продуктах")
@@ -82,6 +86,7 @@ BiRel_D(Reservation, dbReservation, "Чтение и запись в БД", "ODB
 
 BiRel_D(Inventory, dbInventory, "Чтение и запись в БД", "ODBC")
 BiRel_D(Auth, dbAuth, "Чтение и запись в БД", "ODBC")
+BiRel_D(Users, dbUsers, "Чтение и запись в БД", "ODBC")
 BiRel_D(Product, dbProduct, "Чтение и запись в БД", "ODBC")
 
 BiRel_D(1C_Service, db1C, "Чтение и запись в БД", "ODBC")
@@ -89,19 +94,20 @@ BiRel_D(Orders, dbOrders, "Чтение и запись в БД", "ODBC")
 
 
 
-Rel_D(Api, 1C_Service, "Заказы поставщикам", "REST/HTTP")
-Rel_D(Api, Reservation, "Бронь на продукты", "REST/HTTP")
+Rel_D(Api, 1C_Service, "Заказы поставщикам", "REST/HTTPS")
+Rel_D(Api, Reservation, "Бронь на продукты", "REST/HTTPS")
 
 
-Rel_D(Api, Inventory, "Инвентаризация продуктов", "REST/HTTP")
-Rel_D(Api, Auth, "Регистрация пользователя", "REST/HTTP")
-Rel_D(Api, Product, "Данные по продуктам", "REST/HTTP")
+Rel_D(Api, Inventory, "Инвентаризация продуктов", "REST/HTTPS")
+Rel_D(Api, Auth, "Авторизация пользователя", "REST/HTTPS")
+Rel_D(Api, Users, "Данные пользователя", "REST/HTTPS")
+Rel_D(Api, Product, "Данные по продуктам", "REST/HTTPS")
 
 
-Rel_D(Api, Orders, "Информация о заказах поставщикам", "REST/HTTP")
+Rel_D(Api, Orders, "Информация о заказах поставщикам", "REST/HTTPS")
 
 
-Rel_L(Reservation, srobots, "ИНформация о бронированных продуктах для блюда", "REST/HTTP")
-Rel_L(1C_Service, s1C, "Информация заказах поставщикам для сервера заказа", "REST/HTTP")
-Rel_L(1C_Service, smixcart, "Заказ продуктов у поставщиков", "REST/HTTP")
+Rel_L(Reservation, srobots, "ИНформация о бронированных продуктах для блюда", "REST/HTTPS")
+Rel_L(1C_Service, s1C, "Информация заказах поставщикам для сервера заказа", "REST/HTTPS")
+Rel_L(1C_Service, smixcart, "Заказ продуктов у поставщиков", "REST/HTTPS")
 @enduml

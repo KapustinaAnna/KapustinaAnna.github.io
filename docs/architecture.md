@@ -27,9 +27,20 @@
 <tr><td valign="top">Mobile App</td><td valign="top">Container</td><td valign="top">Mobile App</td><td valign="top">Мобильное приложение для оформления заказов и доступа к данным о продуктах.</td><td valign="top">Отправляет запросы через API Gateway к микросервисам.</td></tr>
 <tr><td valign="top">Terminal</td><td valign="top">Container</td><td valign="top">Terminal</td><td valign="top">Терминал для заказа поставщикам и доступа к данным о продуктах.</td><td valign="top">Взаимодействует с API Gateway для оформления заказов.</td></tr>
 <tr><td valign="top">Service Web</td><td valign="top">Container</td><td valign="top">Service Web</td><td valign="top">Веб-приложение для инвентаризации и заказов у поставщиков.</td><td valign="top">Работает через API Gateway для получения и отправки информации.</td></tr>
-<tr><td rowspan="2" valign="top">Микросервис регистрации сотрудников</td><td valign="top">Container</td><td valign="top">Auth</td><td valign="top">Сервис регистрации и аутентификации сотрудников.</td><td valign="top">Взаимодействует с Auth database для сохранения и извлечения данных.</td></tr>
-<tr><td valign="top">Container</td><td valign="top">Auth Database</td><td valign="top">Хранит данные регистрации пользователей.</td><td valign="top">Чтение и запись данных регистрации.</td></tr>
+
+<tr><td rowspan="2" valign="top">Микросервис авторизации пользователей</td><td valign="top">Container</td><td valign="top">Auth</td><td valign="top">Сервис авторизации пользователей.</td><td valign="top">Взаимодействует с Auth database для сохранения и извлечения данных.</td></tr>
+
+<tr><td valign="top">Container</td><td valign="top">Auth Database</td><td valign="top">Хранит данные авторизации пользователей.</td><td valign="top">Чтение и запись данных авторизации.</td></tr>
+<tr><td rowspan="2" valign="top">Микросервис пользователи</td><td valign="top">Container</td><td valign="top">Users</td><td valign="top">Сервис пользователей.</td><td valign="top">Взаимодействует с Users database для сохранения и извлечения данных.</td></tr>
+<tr><td valign="top">Container</td><td valign="top">Users Database</td><td valign="top">Хранит данные пользователей.</td><td valign="top">Чтение и запись данных пользователей.</td></tr>
+
+
+
+
 <tr><td rowspan="2" valign="top">Микросервис  продукты</td><td valign="top">Container</td><td valign="top">Product</td><td valign="top">Сервис работы с данными о продуктах.</td><td valign="top">Взаимодействует с Product database для хранения информации о продуктах.</td></tr>
+
+
+
 <tr><td valign="top">Container</td><td valign="top">Product Database</td><td valign="top">Хранит информацию о продуктах.</td><td valign="top">Чтение и запись данных о продуктах.</td></tr>
 <tr><td rowspan="2" valign="top">Микросервис заказов поставщикам</td><td valign="top">Микросервис</td><td valign="top">Orders</td><td valign="top">Сервис обработки заказов от поставщиков.</td><td valign="top">Взаимодействует с Orders database для хранения данных о заказах.</td></tr>
 <tr><td valign="top">База данных</td><td valign="top">Orders Database</td><td valign="top">Хранит информацию о заказах.</td><td valign="top">Чтение и запись данных о заказах.</td></tr>
@@ -60,15 +71,16 @@
 |mobileApp|API Gateway|Перенаправление запросов|HTTPS|
 |terminal|API Gateway|Перенаправление запросов|HTTPS|
 |service|API Gateway|Перенаправление запросов|HTTPS|
-|API Gateway|Reservation|Бронь на продукты|REST/HTTP|
-|API Gateway|1C_Service|Заказы поставщикам|REST/HTTP|
-|API Gateway|Inventory|Инвентаризация продуктов|REST/HTTP|
-|API Gateway|Auth|Регистрация пользователя|REST/HTTP|
-|API Gateway|Product|Данные по продуктам|REST/HTTP|
-|API Gateway|Orders|Информация о заказах поставщикам|REST/HTTP|
-|Reservation|Роботы|Информация о бронированных продуктах для блюда|REST/HTTP|
-|1C_Service|1C|Информация о заказах поставщикам для сервера заказа|REST/HTTP|
-|1C_Service|Mixcart|Заказ продуктов у поставщиков|REST/HTTP|
+|API Gateway|Reservation|Бронь на продукты|REST/HTTPS|
+|API Gateway|1C_Service|Заказы поставщикам|REST/HTTPS|
+|API Gateway|Inventory|Инвентаризация продуктов|REST/HTTPS|
+|API Gateway|Auth|Авторизация пользователя|REST/HTTPS|
+API Gateway|Users|Данные пользователя|REST/HTTPS|
+|API Gateway|Product|Данные по продуктам|REST/HTTPS|
+|API Gateway|Orders|Информация о заказах поставщикам|REST/HTTPS|
+|Reservation|Роботы|Информация о бронированных продуктах для блюда|REST/HTTPS|
+|1C_Service|1C|Информация о заказах поставщикам для сервера заказа|REST/HTTPS|
+|1C_Service|Mixcart|Заказ продуктов у поставщиков|REST/HTTPS|
 |Auth|dbAuth|Чтение и запись данных регистрации пользователей|ODBC|
 |Product|dbProduct ||ODBC|
 |Orders |dbOrders|Чтение и запись данных о заказах|ODBC|
