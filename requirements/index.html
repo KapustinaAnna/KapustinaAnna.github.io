@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Требования к системе - Требования к системе</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Требования к системе</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Домашняя страница</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href=".." class="dropdown-item">Разработка приложения для инвентаризации, автозаказа и контроля сроков хранения продуктов</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Документация</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../glossary/" class="dropdown-item">Глоссарий</a>
+</li>
+                                    
+<li>
+    <a href="../general%20info/" class="dropdown-item">Общие сведения</a>
+</li>
+                                    
+<li>
+    <a href="../goals/" class="dropdown-item">Назначение и цели создания (развития) системы</a>
+</li>
+                                    
+<li>
+    <a href="../characteristics/" class="dropdown-item">Характеристики объекта автоматизации</a>
+</li>
+                                    
+<li>
+    <a href="../business%20process/" class="dropdown-item">Описание бизнес-процессов</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Требования к системе</a>
+</li>
+                                    
+<li>
+    <a href="../model/" class="dropdown-item">Информационная модель</a>
+</li>
+                                    
+<li>
+    <a href="../architecture/" class="dropdown-item">Компонентная архитектура</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../business%20process/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../model/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Требования к системе</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Требования к системе в целом</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_12" class="nav-link">Удобство использования</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_13" class="nav-link">Требования к функциям (задачам), выполняемым системой</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#usecase-mvp" class="nav-link">Описание UseCase, реализуемых в рамках MVP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#usecase_1" class="nav-link">Описание UseCase, реализуемых в рамках первого релиза</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Требования к системе</h1>
+<h2 id="_2">Требования к системе в целом</h2>
+<h3 id="_3">Производительность</h3>
+<p><strong><code>NFPER1</code></strong> Система должна иметь возможность обслуживать не менее 30 пользователей одновременно в период пиковой активности с 08:00 до 20:00 по местному времени</p>
+<p><strong><code>NFPER2</code></strong> Приложение должно обеспечивать время отклика не более 1 секунд для выполнения основных операций (например, добавление, редактирование и удаление продуктов) в 80% случаев .</p>
+<p><strong><code>NFPER3</code></strong> Приложение должно обеспечить бесперебойную работу всех остальных функций во время инвентаризации, позволяя одновременно обрабатывать до 10,000 единиц товаров без значительного снижения производительности.</p>
+<h3 id="_4">Безопасность</h3>
+<p><strong><code>NFSEC1</code></strong> 
+ Система должна предусматривать аутентификацию пользователей в системе по логину  и паролю.</p>
+<p><strong><code>NFSEC3</code></strong> Приложение должно поддерживать  управление доступом на основе ролей.(администратор/пользователь)</p>
+<h3 id="_5">Масштабируемость</h3>
+<p><strong><code>NFEXT1</code></strong>  Система должна позволять увеличение производительности за счёт увеличения вычислительной мощности и ресурсов со стороны оборудования.</p>
+<p><strong><code>NFEXT2</code></strong> Приложение должно позволять управлять  системой хранение продуктов, инвентаризацией и автозаказом без потери текущей производительности при приросте  2 ресторана в год.</p>
+<h3 id="_6">Надежность</h3>
+<p><strong><code>NFROB1</code></strong> Вероятность возникновения критической ошибки должна составлять не более 0,5 % обращений.</p>
+<p><strong><code>NFROB2</code></strong> Система должна демонстрировать уровень надёжности, при котором время восстановления после сбоя в работе отдельной функции не превышает 30 с секунд в 90% случаев.  </p>
+<p><strong><code>NFROB3</code></strong> Приложение должно иметь механизмы для автоматического восстановления данных после сбоев, включая резервное копирование и восстановление данных.</p>
+<h3 id="_7">Совместимость</h3>
+<p><strong><code>NFCOM1</code></strong>  Мобильное приложение должно быть совместимо с ОС Android 7.0 или выше и iOS 13 или выше.</p>
+<p><strong><code>NFCOM2</code></strong> Веб-приложение должно быть кросс-браузерным.</p>
+<p><strong><code>NFCOM3</code></strong> Приложение должно поддерживать интеграцию с 1С, сервисом заказа ресторана, системами поставщиков.   </p>
+<h3 id="_8">Доступность</h3>
+<p><strong><code>NFAVL1</code></strong> Допустимое время простоя в сутки не более 30 минут.
+<strong><code>NFAVL2</code></strong> Уровень доступности: Система должна обеспечивать уровень доступности 98%, за исключением времени планового обслуживания.
+<strong><code>NFAVL3</code></strong> Допустимое время простоя в месяц, часов, не более 5 часов  </p>
+<h3 id="_9">Особенности хранения данных</h3>
+<p><strong><code>NFDT1</code></strong> Логи о действиях сотрудника должна храниться 2 года</p>
+<p><strong><code>NFDT2</code></strong> Бекапы БД должны производиться каждые 60 мин.</p>
+<p><strong><code>NFDT3</code></strong> Бекапы БД должны храниться 7 дней с момента создания. </p>
+<h3 id="_10">Концептуальная целостность</h3>
+<p><strong><code>NFARC1</code></strong>  Все элементы пользовательского интерфейса должны следовать единому стилю, цветовой палитре и шрифтам, предлагая пользователям понятное и предсказуемое взаимодействие.</p>
+<h3 id="_11">Поддерживаемость</h3>
+<p><strong><code>NFSUP1</code></strong> Необходимо логировать действия пользователей в системе. Просмотр данных логов должен осуществляться через графический интерфейс.</p>
+<p><strong><code>NFSUP2</code></strong>  Необходимо предоставить полную документацию как для пользователей, так и для разработчиков, включая руководства, API-документацию </p>
+<h2 id="_12">Удобство использования</h2>
+<p><strong><code>NFRS1</code></strong>  Приложение должно иметь адаптивный дизайн для различных устройств: мобильные телефон, планшет.</p>
+<h2 id="_13">Требования к функциям (задачам), выполняемым системой</h2>
+<h3 id="usecase">UseCase диаграмма</h3>
+<p>Основные функции системы представлены в виде UseCase диаграммы.  </p>
+<p><img alt="" src="../diagrams/out/usecase.svg" /></p>
+<h2 id="usecase-mvp"><a name="_wewk7tue8td2"></a> Описание UseCase, реализуемых в рамках MVP</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Инвентаризация</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Проведение инвентаризации продуктов ресторана</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;">Менеджер пополнения(пользователь )</td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Менеджер пополнения авторизован в системе и у него есть аппарат для сканирования штрихкода</td>
+</tr>
+<tr>
+<td style="text-align: left;">Постусловие</td>
+<td style="text-align: left;">Все Продукты проверены, информация в системе верная</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователь сканирует штрихкод продукта.</p><p>2. Система показывает информацию по продукту</p><p>3. Пользователь сверяет информацию</p><p>4. Если информация верная, пользователь переходит к проверке следующего продукта </p><p>Конец сценария,когда все продукты проверены</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p><strong>Продукт не найден</strong></p><p>2А. Система выдает ошибку, что продукт не найден </p><p>1. Пользователь добавляет информация о продукте в систему</p><p>&emsp;</p><p><strong>Некорректная информация в системе</strong></p><p></p><p>4А. Если информация некорректная:</p><p>1. Пользователь вносит правки</p><p>2. Пользователь сохраняет новую информацию</p><p>   </p><p></p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;"><p></p><p>Система на любом шаге позволяет завершить процесс</p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Добавить продукт</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Добавление продукта в базу</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;">Менеджер пополнения, технолог</td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Пользователь авторизован в системе находится в главном интерфейсе</td>
+</tr>
+<tr>
+<td style="text-align: left;">Постусловие</td>
+<td style="text-align: left;">Продукт добавлен в базу</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователь нажимает кнопку добавить продукт</p><p>2. Система показывает форму для ввода информации</p><p>3. Пользователь заполняет необходимую информацию.</p><p>4. Пользователь нажимает кнопку для сохранения информации</p><p>5. Система сохраняет информацию в базе</p><p>6. Система показывает уведомление,что продукт успешно добавлен</p><p>Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p><strong>Пользователь передумал добавлять новый продукт</strong></p><p><code></code>3А. Пользователь закрывает форму для ввода информации</p><p>1. Система возвращается в главный интерфейс</p><p>Конец сценария</p><p>4А. Пользователь нажимает кнопку отмена</p><p>1. Система показывает форму для отмены добавления товара </p><p>2. Пользователь отменяет добавление</p><p>3. Система возвращается в главный интерфейс</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;"><p>Система на любом шаге позволяет завершить процесс</p><p></p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Обновить информацию о продукте</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Обновление информации о продукте уже занесенном в систему</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;">Менеджер пополнения, технолог</td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Пользователь авторизован в системе находится в главном интерфейсе</td>
+</tr>
+<tr>
+<td style="text-align: left;">Постусловие</td>
+<td style="text-align: left;">Информация о продукте обновлена</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователь открывает информацию о необходимом продукте</p><p>2. Пользователь вносит изменения в информацию о продукте</p><p>3. Пользователь нажимает кнопку для сохранения информации</p><p>4. Система сохраняет  новую информацию  о продукте</p><p>5. Система показывает уведомление,что продукт успешно обновлен</p><p>Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p><strong>Пользователь не нажимает кнопку для сохранения информации</strong></p><p>3А Пользователь переходит на другую страницу или обновляет текущую</p><p>1. Система выводит предупреждение о том, что введенная информация не сохранится. Предлагает сохранить измененную информацию</p><p>2. Пользователь нажимает кнопку сохранения.</p><p>3. <code></code>Переход к пункту 4 основного сценария</p><p>&emsp;Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;"><p>Система на любом шаге позволяет завершить процесс без сохранения изменений</p><p></p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Автозаказ продуктов</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Автоматический заказ продукции при критическом количестве продукта в системе</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;"><p>Менеджер пополнения(пользователь)</p><p>Система</p><p>Поставщик</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Осталось минимально допустимое количество продукта,пользователь авторизован</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Система присылает пользователю уведомлении о формировании заказа поставищку</p><p>2. Пользователь проверяет и утверждает заказ</p><p>3. Система отправляет поставщику заказ</p><p>4. Поставщик утверждает заказ</p><p>5. Система ожидает получения заказа</p><p>6. Пользователь получает заказ</p><p>7. Пользователь отмечает в системе,что заказ получен</p><p>8. Пользователь добавляет сведения в систему</p><p>Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p><strong>Пользователю требуется внести изменения в заказ</strong></p><p>2А Пользователь  не утверждает заказ</p><p>1. Пользователь вносит изменения в заказ</p><p>2. Возвращение к п. 2 основного сценария</p><p>Конец сценария</p><p></p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;">Система на любом шаге позволяет завершить процесс без сохранения изменений</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Ручной заказ продуктов</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Менеджеру пополнения необходимо заказать продукты вручную</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;"><p>Менеджер пополнения(пользователь)</p><p>Система</p><p>Поставщик</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Пользователь авторизован в системе</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователь формирует заказ поставщику </p><p>2. Пользователь проверяет и утверждает заказ</p><p>3. Система отправляет поставщику заказ</p><p>4. Поставщик утверждает заказ</p><p>5. Система ожидает получения заказа</p><p>6. Пользователь получает заказ</p><p>7. Пользователь отмечает в системе,что заказ получен</p><p>8. Пользователь добавляет сведения в систему</p><p>9. Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;">Система на любом шаге позволяет завершить процесс без сохранения изменений</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Контроль срока годности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Контроль сроков годности продуктов для предотвращения их списания</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;"><p>Система</p><p>Менеджер пополнение(пользователь)</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Осталось 5 дней до окончания срока годности продукта</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователю приходит уведомление о скором окончании срока годности продукта</p><p>2. Система ставит продукт первым в очередь на выдачу</p><p>3. Пользователь контролирует срок годность продукта </p><p>4. При поступлении заказа и срок продукта еще не вышел, он выдается для приготовление заказа</p><p>Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p>Срок годности продукта вышел</p><p>4А Срок годности  продукта вышел</p><p>1. Пользователю приходит уведомление, что у продукта закончился срок годности</p><p>2. Пользователь списывает продукт</p><p>3. Система добавляет данные в отчет</p><p></p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Списание продукта</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Списание продуктов  в процессе инвентаризации</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;"><p>Менеджер пополнение(пользователь)</p><p>Система</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Пользователь авторизован в системе. Пользователь просматривает информацию о продукте, в частности срок годности.У продукта истек срок годности или он испорчен</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователь выбирает списать продукт</p><p>2. Пользователь указывает причину списания </p><p>3. Система снимает продукт с баланса.</p><p>4. Система добавляет данные  в отчет</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;">Система на любом шаге позволяет завершить процесс без сохранения изменений</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Просмотреть информацию о продукте</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Просмотреть полную  информацию о продукте</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;"><p>Менеджер пополнения(пользователь)</p><p>Система</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Пользователь прошел аутентификацию в приложении</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователь вводит в поле фильтра информацию  для поиска продукта</p><p>2. Система выдает результаты поиска</p><p>3. Пользователь выбирает нужный продукт</p><p>4. Система показывает окно с полной информацией о продукте</p><p>5. Пользователь закрывает окно,ознакомившись с информацией</p><p>Конец сценария</p><p></p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p><strong>Пользователь в чтение 5  минут не закрывает окно</strong></p><p>5А Система возвращается в исходное окно</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;">Система на любом шаге позволяет завершить процесс без сохранения изменений</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Аутентификация пользователя</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Вход  зарегистрированного пользователя в систему</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;"><p>1. Клиент</p><p>2. Система</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;"><p>Клиент уже зарегистрирован в системе администратором . Клиент открыл страницу аутентификации.</p><p></p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Постусловие</td>
+<td style="text-align: left;">Клиент авторизован в системе</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Клиент вводит логин и пароль.</p><p>2. Клиент пытается авторизоваться</p><p>3. Система проверяет, что логин и пароль введены корректно</p><p>4. <code></code>Если логин и пароль верные, аутентификация пройдена.</p><p>Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p><strong>Логин или пароль некорректны</strong></p><p>3А.Не найден пользователь с такими данными.</p><p>1. Система выдает сообщения,что вход не возможен и предлагает восстановить пароль. </p><p>2. Пользователь выбирает восстановить пароль:  </p><p>1. Система выводит диалоговое окно для ввода электронной почты указанного при регистрации.</p><p>2. Клиент вводит данные</p><p>3. Система отправляет новый пароль на введенный имейл.</p><p>4. Переход к п.1 основного сценария. Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;">Система на любом шаге позволяет завершить процесс без сохранения изменений</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Выдача продукта</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Выдача продукта для приготовления заказа роботу</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;"><p>1. Приложение заказа</p><p>2. Система</p><p>3. Система роботов</p><p>4. Технолог</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Клиент сделал заказ в ресторане, заказ оплачен,продукты есть в наличии роботы освободились для приготовления.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Система роботов отправляет запрос в приложении заказа,что робот освободился</p><p>2. Приложение заказа в систему отправляет запрос для выдачи продуктов</p><p>3. Система  ищет забронированные продукты для данного заказа</p><p>4. Система снимает с баланса выбранные продукты</p><p>5. Система добавляет данные в отчет</p><p>6. Робот начинает готовить заказ</p><p>Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p>Произошла ошибка,нет забронированных продуктов</p><p>3А Система не нашла забронированного продукта</p><p>1. Система выдает ошибку</p><p>2. Система отправляет уведомление технологу о произошедшей ошибке</p><p>3. Технолог ищет подходящие продукты и добавляет их для приготовления заказа в систему</p><p>4. Система переходит к п. 4 основного сценария.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usecase_1"><a name="_wewk7tue8td2"></a>Описание UseCase, реализуемых в рамках первого релиза</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Удалить продукт</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Удаление продукта из системы</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;">Менеджер пополнения, технолог</td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Пользователь авторизован и просматривает информацию о продукте</td>
+</tr>
+<tr>
+<td style="text-align: left;">Постусловие</td>
+<td style="text-align: left;">Продукт удален из базы</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователь нажимает кнопку удалить продукт</p><p>2. Система показывает форму подтверждения удаления</p><p>3. Пользователь подтверждает удаление продукта</p><p>4. Система удаляет продукт, заносит в отчет</p><p>Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p>Пользователь передумал удалять продукт </p><p>3А. Пользователь отменяет удаление продукта</p><p></p><p>Конец сценария</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;"><p>Система на любом шаге позволяет завершить процесс</p><p></p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Название</strong></th>
+<th style="text-align: left;"><strong>Регистрация пользователя</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Краткое описание</td>
+<td style="text-align: left;">Регистрация пользователя для возможно управления и чтения информации о продуктах</td>
+</tr>
+<tr>
+<td style="text-align: left;">Субъекты</td>
+<td style="text-align: left;"><p>1. Пользователь</p><p>2. Система</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Предусловие</td>
+<td style="text-align: left;">Пользователь зашел на страницу регистрации</td>
+</tr>
+<tr>
+<td style="text-align: left;">Постусловие</td>
+<td style="text-align: left;">Пользователь зарегистрирован в системе</td>
+</tr>
+<tr>
+<td style="text-align: left;">Основной сценарий</td>
+<td style="text-align: left;"><p>1. Пользователь заполняет на странице данные для регистрации</p><p>2. Система проверяет наличие в системе пользователей с такими же логином,почтой или телефоном.</p><p>3. Если  пользователь с таким и данными не существует Система отправляет код подтверждения на электронную почту</p><p>4. Система выводит диалоговое окно подтверждения номера телефона.</p><p>5. Пользователь вводит код подтверждения в диалоговом окне</p><p>6. Система сохраняет данные регистрации.</p><p><code></code>Конец сценария.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Альтернативный сценарий</td>
+<td style="text-align: left;"><p>3А: Пользователь с введенным данными  уже существует.</p><p>1. Система выводит сообщение, что пользователь с такими данными уже зарегистрирован.</p><p>2. Пользователь закрывает окно предупреждения</p><p>3. Пользователь вводит новые данные для регистрации</p><p>4. Переход к п.2 основного сценария. Конец сценария.</p></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p><strong>Прерывание процесса:</strong></p><p></p></td>
+<td style="text-align: left;">Система на любом шаге позволяет завершить процесс без сохранения изменений</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

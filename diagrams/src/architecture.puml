@@ -1,0 +1,114 @@
+@startuml
+!include <C4/C4_Container>
+skinparam Linetype polyline
+
+
+Person(admin, "Технолог")
+Person(manager, "Менеджер по ассортименту")
+Person(manager_pop, "Менеджер пополнения")
+
+System_Boundary(restoran, ""){
+    ContainerQueue(Api, "API Gateway", "Azure API", "Взаимодействие с микросервисами")
+
+       Container(mobileApp, "Mobile", "Flutter", "Мобильное приложение для оформление заказа поставщикам и доступа к данным по продуктам") 
+
+    Container(terminal, "Terminal", "  ", "Терминал для заказа поставщикам,доступа к данным по продуктам")
+  
+Container(service, "Service web", "ASP.NET", "Веб-приложение для инвенатризации, заказов постащикам,работа с продуктами")
+    
+   
+   
+    
+    Boundary(msAuth, "Микросервис авторизации пользователей"){
+        Container(Auth, "Auth", "C#, .NET", "Сервис авторизации пользователей")
+        ContainerDb(dbAuth, "Auth database", "PostgreSQL", "Хранение данных авторизации пользователей")
+    }
+
+    
+    Boundary(msUsers, "Микросервис пользователи"){
+        Container(Users, "Users", "C#, .NET", "Сервис пользователb")
+        ContainerDb(dbUsers, "Users database", "PostgreSQL", "Хранение данных  пользователей")
+    }
+    Boundary(msProduct, "Микросервис  продукты") {
+        Container(Product, "Product", "C#, .NET", "Сервис работы с данными о продуктах")
+        ContainerDb(dbProduct, "Product database", "PostgreSQL", "Хранение данных о продуктах")
+    }
+   Boundary(msOrders, "Микросервис заказов поставщикам") {
+        Container(Orders, "Orders", "C#, .NET", "Сервис заказов")
+        ContainerDb(dbOrders, "Orders database", "PostgreSQL", Хранение данных о заказах")
+
+}
+ 
+  
+  Boundary(ms1C, "Микросервис работы с 1С"){
+        Container(1C_Service, "1С Service", "C#, .NET", "Сервис работы с 1С")
+        ContainerDb(db1C, "1С database", "PostgreSQL", "Хранения данных  для 1C")
+    }    
+  
+  
+ Boundary(msReservation, "Микросервис брони продуктов для роботов"){
+        Container(Reservation, "Product reservation", "C#, .NET", "Сервис брони продуктов")
+        ContainerDb(dbReservation, "Reservation database", "PostgreSQL", "Хранение данных брони продуктов")
+    }
+
+Boundary(msInventory, "Микросервис Инвентаризации"){
+        Container(Inventory, "Inventorys", "C#, .NET", "Сервис инвенатризации")
+        ContainerDb(dbInventory, "Inventory database", "PostgreSQL", "Хранение данных об инвентаризациях")
+    }
+   Boundary(msAnalytics, "Микросервис аналитика"){
+        Container(Analytics, "Analytics", "C#, .NET", "Сервис Аналитики")
+        ContainerDb(dbAnalytics, "Analytics database", "PostgreSQL", "Хранение данных для аналитики")
+}
+
+    System_Ext(smixcart, "Mixcart", "Сервис для закупок и документооборота с поставщиками")
+    System_Ext(srobots, "Роботы", "Сервис работы роботов")
+    System_Ext(s1C, "1C", "Сервис бухгалтерских операций")
+    System_Ext(srobots, "Роботы", "Роботы для приготовления блюд")
+
+
+
+
+Rel_D(mobileApp, Api, "Перенаправляет запросы", "HTTPS")
+Rel_D(terminal, Api, "Перенаправляет запросы", "HTTPS")
+
+Rel_D(service, Api, "Перенаправляет запросы", "HTTPS")
+
+Rel_D(admin, mobileApp, " ")
+
+Rel_D(manager, service, " ")
+Rel_D(admin, terminal, " ")
+Rel_D(admin, service, " ")
+Rel_D(manager_pop, mobileApp, " ")
+
+Rel_D(manager_pop, service, " ")
+Rel_D(manager_pop, terminal, " ")
+
+BiRel_D(Reservation, dbReservation, "Чтение и запись в БД", "ODBC")
+
+
+BiRel_D(Inventory, dbInventory, "Чтение и запись в БД", "ODBC")
+BiRel_D(Auth, dbAuth, "Чтение и запись в БД", "ODBC")
+BiRel_D(Users, dbUsers, "Чтение и запись в БД", "ODBC")
+BiRel_D(Product, dbProduct, "Чтение и запись в БД", "ODBC")
+
+BiRel_D(1C_Service, db1C, "Чтение и запись в БД", "ODBC")
+BiRel_D(Orders, dbOrders, "Чтение и запись в БД", "ODBC")
+BiRel_D(Analytics, dbAnalytics, "Чтение и запись в БД", "ODBC")
+
+Rel_D(Api, 1C_Service, "Заказы поставщикам", "REST/HTTPS")
+Rel_D(Api, Reservation, "Бронь на продукты", "REST/HTTPS")
+
+
+Rel_D(Api, Inventory, "Инвентаризация продуктов", "REST/HTTPS")
+Rel_D(Api, Auth, "Авторизация пользователя", "REST/HTTPS")
+Rel_D(Api, Users, "Данные пользователя", "REST/HTTPS")
+Rel_D(Api, Product, "Данные по продуктам", "REST/HTTPS")
+Rel_D(Api, Analytics, "Данные для аналитики", "REST/HTTPS")
+
+Rel_D(Api, Orders, "Информация о заказах поставщикам", "REST/HTTPS")
+
+
+Rel_L(Reservation, srobots, "ИНформация о бронированных продуктах для блюда", "REST/HTTPS")
+Rel_L(1C_Service, s1C, "Информация заказах поставщикам для сервера заказа", "REST/HTTPS")
+Rel_L(1C_Service, smixcart, "Заказ продуктов у поставщиков", "REST/HTTPS")
+@enduml
