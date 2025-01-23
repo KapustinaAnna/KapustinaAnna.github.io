@@ -50,6 +50,10 @@
 <tr><td valign="top">База данных</td><td valign="top">1С Database</td><td valign="top">Хранит данные для интеграции с 1С.</td><td valign="top">Чтение и запись данных для бухгалтерских операций.</td></tr>
 <tr><td rowspan="2" valign="top">Микросервис Инвентаризации</td><td valign="top">Микросервис</td><td valign="top">Inventory</td><td valign="top">Сервис инвентаризации продуктов.</td><td valign="top">Взаимодействует с базой данных инвентаризации  для хранения информации об инвентаризациях.</td></tr>
 <tr><td valign="top">База данных</td><td valign="top">Inventory Database</td><td valign="top">Хранит данные об инвентаризациях.</td><td valign="top">Чтение и запись данных о инвентаризациях.</td></tr>
+<tr><td rowspan="2" valign="top">Микросервис Аналитики</td><td valign="top">Микросервис</td><td valign="top">Analytics</td><td valign="top">Сервис Аналитики.</td><td valign="top">Взаимодействует с базой данных аналитики для хранения и составления отчетов</td></tr>
+<tr><td valign="top">База данных</td><td valign="top">Analytics Database</td><td valign="top">Хранит данные об отчетах</td><td valign="top">Чтение и запись данных для отчетов</td></tr>
+
+
 <tr><td valign="top">Сервис для закупок и документооборота с поставщиками</td><td valign="top">External system</td><td valign="top">Mixcart</td><td valign="top">Сервис для закупок и документооборота с поставщиками.</td><td valign="top">Взаимодействует с сервисом   1С</td></tr>
 <tr><td valign="top">Сервис работы роботов</td><td valign="top">External system</td><td valign="top">Сервис Роботы</td><td valign="top">Сервис, управляющий роботами для приготовления блюд. </td><td valign="top">Взаимодействует с сервисом !!!!</td></tr>
 <tr><td valign="top">Сервис бухгалтерских операций</td><td valign="top">External system</td><td valign="top">1C_Service</td><td valign="top">Система для бухгалтерских операций.</td><td valign="top">Взаимодействует с сервисом  работы с 1С</td></tr>
@@ -78,12 +82,14 @@
 API Gateway|Users|Данные пользователя|REST/HTTPS|
 |API Gateway|Product|Данные по продуктам|REST/HTTPS|
 |API Gateway|Orders|Информация о заказах поставщикам|REST/HTTPS|
+|API Gateway|Analytics|Данные для аналитики|REST/HTTPS|
 |Reservation|Роботы|Информация о бронированных продуктах для блюда|REST/HTTPS|
 |1C_Service|1C|Информация о заказах поставщикам для сервера заказа|REST/HTTPS|
 |1C_Service|Mixcart|Заказ продуктов у поставщиков|REST/HTTPS|
 |Auth|dbAuth|Чтение и запись данных регистрации пользователей|ODBC|
-|Product|dbProduct ||ODBC|
+|Product|dbProduct |Чтение и запись данных о продуктах|ODBC|
 |Orders |dbOrders|Чтение и запись данных о заказах|ODBC|
+|Analytics |dbAnalytics|Чтение и запись данных для отчетов|ODBC|
 |Reservation|dbReservation|Чтение и запись данных о запасах|ODBC|
 |Inventory|dbInventory|Чтение и запись данных об инвентаризациях|ODBC|
 |1C_Service|db1C|Чтение и запись данных для 1С|ODBC|
