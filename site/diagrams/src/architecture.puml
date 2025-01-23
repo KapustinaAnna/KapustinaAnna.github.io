@@ -51,11 +51,13 @@ Container(service, "Service web", "ASP.NET", "Веб-приложение для
         ContainerDb(dbReservation, "Reservation database", "PostgreSQL", "Хранение данных брони продуктов")
     }
 
-Boundary(msInventory, "Микросервис Инвентаризации+"){
+Boundary(msInventory, "Микросервис Инвентаризации"){
         Container(Inventory, "Inventorys", "C#, .NET", "Сервис инвенатризации")
         ContainerDb(dbInventory, "Inventory database", "PostgreSQL", "Хранение данных об инвентаризациях")
     }
-
+   Boundary(msAnalytics, "Микросервис аналитика"){
+        Container(Analytics, "Analytics", "C#, .NET", "Сервис Аналитики")
+        ContainerDb(dbAnalytics, "Analytics database", "PostgreSQL", "Хранение данных для аналитики")
 }
 
     System_Ext(smixcart, "Mixcart", "Сервис для закупок и документооборота с поставщиками")
@@ -91,8 +93,7 @@ BiRel_D(Product, dbProduct, "Чтение и запись в БД", "ODBC")
 
 BiRel_D(1C_Service, db1C, "Чтение и запись в БД", "ODBC")
 BiRel_D(Orders, dbOrders, "Чтение и запись в БД", "ODBC")
-
-
+BiRel_D(Analytics, dbAnalytics, "Чтение и запись в БД", "ODBC")
 
 Rel_D(Api, 1C_Service, "Заказы поставщикам", "REST/HTTPS")
 Rel_D(Api, Reservation, "Бронь на продукты", "REST/HTTPS")
@@ -102,7 +103,7 @@ Rel_D(Api, Inventory, "Инвентаризация продуктов", "REST/H
 Rel_D(Api, Auth, "Авторизация пользователя", "REST/HTTPS")
 Rel_D(Api, Users, "Данные пользователя", "REST/HTTPS")
 Rel_D(Api, Product, "Данные по продуктам", "REST/HTTPS")
-
+Rel_D(Api, Analytics, "Данные для аналитики", "REST/HTTPS")
 
 Rel_D(Api, Orders, "Информация о заказах поставщикам", "REST/HTTPS")
 
