@@ -12,3 +12,9 @@ nav:
     - requirements.md
     - model.md
     - architecture.md
+    - api.md
+    
+plugins:
+  - render_swagger
+
+  

@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Описание бизнес-процессов - Требования к системе</title>
+        <title>API приложения - Требования к системе</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -64,7 +64,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Описание бизнес-процессов</a>
+    <a href="../business%20process/" class="dropdown-item">Описание бизнес-процессов</a>
 </li>
                                     
 <li>
@@ -80,7 +80,7 @@
 </li>
                                     
 <li>
-    <a href="../api/" class="dropdown-item">API приложения</a>
+    <a href="./" class="dropdown-item active" aria-current="page">API приложения</a>
 </li>
                                 </ul>
                             </li>
@@ -88,12 +88,12 @@
 
                     <ul class="nav navbar-nav ms-md-auto">
                             <li class="nav-item">
-                                <a rel="prev" href="../characteristics/" class="nav-link">
+                                <a rel="prev" href="../architecture/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../requirements/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -115,20 +115,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#-" class="nav-link">Описание бизнес-процессов</a>
+            <li class="nav-item" data-bs-level="1"><a href="#api" class="nav-link">API приложения</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Инвентаризация:</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Заказ:</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Контроль сроков:</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -136,25 +124,17 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="-">Описание бизнес-процессов</h1>
-<h2 id="_1">Инвентаризация:</h2>
-<p>На схеме представлены следующие бизнес-процессы:</p>
-<ul>
-<li>Инвентаризация</li>
-<li>Проверка наличия товаров</li>
-<li>Проверка на дубликаты</li>
-<li>Списание продуктов для заказа блюда </li>
-</ul>
-<h2 id="_2">Заказ:</h2>
-<ul>
-<li>Автозаказ</li>
-<li>Оформление ручного заказа</li>
-</ul>
-<h2 id="_3">Контроль сроков:</h2>
-<ul>
-<li>Мониторинг сроков годности</li>
-</ul>
-<p><img alt="" src="../diagrams/include/biznes.svg" /></p></div>
+<h1 id="api">API приложения</h1>
+<p><link type="text/css" rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css"></p>
+<div id="swagger-ui-1">
+</div>
+<script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js" charset="UTF-8"></script>
+<script>
+    SwaggerUIBundle({
+      url: 'inventory.json',
+      dom_id: '#swagger-ui-1',
+    })
+</script></div>
             </div>
         </div>
 

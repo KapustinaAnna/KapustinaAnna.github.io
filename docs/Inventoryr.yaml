@@ -1,0 +1,513 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: 'ProdCheck'
+  description: 'API для приложения для инвентаризации, автозаказа и контроля сроков хранения продуктов'
+paths:
+  /products:
+    get:
+      tags:
+        - Управление продуктами
+      summary: Получить текущие запасы продуктов в режиме реального времени
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: page
+          required: true
+          description: 'Номер страницы для пагинации.'
+          schema:
+            type: integer
+        - in: query
+          name: pageSize
+          required: true
+          description: 'Количество продуктов, возвращаемых на одной странице.'
+          schema:
+            type: integer
+        - in: query
+          name: categoryId
+          required: false
+          description: 'Категория продуктов'
+          schema:
+            type: integer  
+      responses:
+        '200':
+          description: Список текущих запасов продуктов
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                    description: Общее количество продуктов
+                  products:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Product'
+                  page:
+                    type: integer
+                    description: Текущая страница
+                  pageSize:
+                    type: integer
+                    description: Количество продуктов на странице
+        '401':
+          description: Неавторизован, пользователь не аутентифицирован
+        '500':
+          description: Внутренняя ошибка сервера          
+    post:
+      tags:
+        - Управление продуктами
+      summary: Добавить поступление продукта
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '201':
+          description: Продукт успешно добавлен
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+  /products/{productId}:
+    put:
+      tags:
+        - Управление продуктами
+      summary: Списать продукт со склада
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quantity:
+                  type: integer
+                  description: Количество, которое списывается
+      responses:
+        '200':
+          description: Продукт успешно списан
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+  /products/{productId}/reserve:
+    post:
+      tags:
+        - Управление продуктами
+      summary: Забронировать продукт для приготовления
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string 
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quantity:
+                  type: integer
+                  description: Количество для бронирования
+      responses:
+        '200':
+          description: Продукт успешно забронирован
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductReserve'
+        '404':
+          description: Продукт не найден       
+  /orders:
+    post:
+      tags: 
+        - Работа с заказами поставщика
+      summary: Создание заказа продуктов поставщику
+      description: Создает новый заказ для поставщика с возможностью указания ручного или автоматического создания.
+      operationId: createSupplierOrder
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+               $ref: '#/components/schemas/CreateOrderRequest'
+      responses:
+        '201':
+          description: Заказ успешно создан
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  orderId:
+                    type: string
+                    description: Идентификатор созданного заказа
+        '400':
+          description: Неверный запрос, например, отсутствуют необходимые параметры
+        '401':
+          description: Пользователь не авторизован
+        '500':
+          description: Внутренняя ошибка сервера
+  /orders/{orderId}:
+    put:
+      tags: 
+        - Работа с заказами поставщика
+      summary: Обновление заказа поставщику
+      description: Обновляет существующий заказ поставщику.
+      operationId: updateSupplierOrder
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          description: Идентификатор заказа для обновления.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateOrderRequest'
+      responses:
+        '200':
+          description: Заказ успешно обновлен
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateOrderResponse'
+        '400':
+          description: Неверный запрос, например, отсутствуют необходимые параметры
+        '404':
+          description: Заказ не найден
+        '401':
+          description: Пользователь не авторизован
+        '500':
+          description: Внутренняя ошибка сервера              
+  /inventory:
+    post:
+      tags:
+        - Инвентаризация
+      summary: Создать новый процесс инвентаризации
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Название процесса инвентаризации
+                date:
+                  type: string
+                  format: date
+                  description: Дата инвентаризации
+                userId:
+                  type: integer
+                  description: ID пользователя, проводящего инвентаризацию
+              required:
+                - name
+                - date
+                - userId
+      responses:
+        '201':
+          description: Процесс инвентаризации успешно создан
+        '400':
+          description: Неверный запрос
+        '401':
+          description: Неавторизован, пользователь не аутентифицирован
+        '500':
+          description: Внутренняя ошибка сервера
+    get:
+      tags:
+        - Инвентаризация
+      summary: Получить историю прошедших инвентаризаций
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: page
+          required: false
+          description: Номер страницы для пагинации.
+          schema:
+            type: integer
+        - in: query
+          name: pageSize
+          required: false
+          description: Количество инвентаризаций, возвращаемых на одной странице.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: История инвентаризаций
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                    description: Общее количество инвентаризаций
+                  audits:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          description: ID инвентаризации
+                        name:
+                          type: string
+                          description: Название процесса инвентаризации
+                        date:
+                          type: string
+                          format: date
+                          description: Дата инвентаризации
+                        userId:
+                          type: integer
+                          description: ID пользователя, проводящего инвентаризацию
+                  page:
+                    type: integer
+                    description: Текущая страница
+                  pageSize:
+                    type: integer
+                    description: Количество инвентаризаций на странице
+        '401':
+          description: Неавторизован, пользователь не аутентифицирован
+        '500':
+          description: Внутренняя ошибка сервера
+  /users:     
+    post:
+      tags:
+      - Пользователь
+      summary: Создать нового пользователя
+      description: Регистрация нового пользователя.
+      security: []
+      operationId: createUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+      responses:
+        "200":
+           description: Новый пользователь успешно создан
+        '404':
+          description: Что-то пошло не так...
+        '401':
+          description: Пользователь не авторизован
+  /users/login:
+    post:
+      tags:
+        - Пользователь
+      summary: Аутентификация пользователя
+      security: []
+      operationId: authUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                  description: Имя пользователя
+                password:
+                  type: string
+                  format: password
+                  description: Пароль пользователя 
+      responses:
+        '200':
+          description: Аутентификация выполнена успешно
+        '401':
+          description: Неправильный логин или пароль
+  /users/{userId}:
+    get:
+      tags:
+      - Пользователь
+      summary: Получить инофрмацию о пользователе по ID
+      description: Получить инофрмацию о пользователе по ID.
+      operationId: getUserById
+      parameters:
+      - $ref: '#/components/parameters/userId'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: Пользователь не найден
+        '401':
+          description: Пользователь не авторизован
+    put:
+      tags: 
+        - Пользователь
+      summary: Изменить информацию о пользователе по ID
+      description: Изменить инофрмацию о пользователе по ID.
+      operationId: editUser
+      parameters:
+      - $ref: '#/components/parameters/userId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        "200":
+          description: Информация о пользователе успешно обновлена 
+        '404':
+          description: Пользователь не найден.
+        '401':
+          description: Пользователь не авторизован      
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID продукта
+        name:
+          type: string
+          description: Наименование продукта
+        category:
+          type: string
+          description: Категория продукта
+        quantity:
+          type: integer
+          description: Текущее количество продукта на складе
+        expiryDate:
+          type: string
+          format: date
+          description: Срок годности продукта
+        warehouse:
+          type: string
+          description: Поставщик
+        supplier:
+          type: string
+          description: Склад
+    ProductReserve:
+      type: object
+      properties:
+        productId:
+          type: string
+          description: ID забронированного продукта
+        reservedQuantity:
+          type: integer
+          description: Количество, которое было забронировано
+        ordersRestId:
+          type: integer
+          description: id заказа в ресторане
+    CreateOrderRequest:
+      type: object
+      properties:
+        supplierId:
+          type: string
+          description: Идентификатор поставщика
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+        isManual:
+          type: boolean
+          description: Параметр, указывающий, создавать ли заказ вручную
+      required:
+        - supplierId
+        - products
+    UpdateOrderRequest:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+        status:
+          type: string
+          description: Новый статус заказа
+      required:
+        - products
+    UpdateOrderResponse:
+      type: object
+      properties:
+        orderId:
+          type: string
+          description: Идентификатор обновленного заказа
+        status:
+          type: string
+          description: Статус обновленного заказа
+    User:
+      description: Информация о пользователе
+      required:
+      - userId
+      - name
+      - phoneNumber
+      type: object
+      properties:
+        userId:
+          allOf:
+            - $ref: '#/components/parameters/userId'
+          type: integer
+        name:
+          maxLength: 150
+          minLength: 2
+          type: string
+          description: Имя пользователя
+          nullable: false
+        phoneNumber:
+          maxLength: 2000
+          minLength: 50
+          type: string
+          description: Телефон ресторана
+        email:
+          maxLength: 500
+          minLength: 2
+          type: string
+          description: email пользователя
+          nullable: false
+  parameters:
+    userId:
+      name: userId
+      in: path
+      description: Уникальный ID пользователя
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: integer
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/NAUANNET/Inventory/1.0.0
