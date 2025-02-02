@@ -1,4 +1,7 @@
 site_name: Требования к системе
+site_url: https://kapustinaanna.github.io/site/
+plugins:
+  - render_swagger
 
 nav:
   - Домашняя страница:
@@ -13,8 +16,16 @@ nav:
     - model.md
     - architecture.md
     - api.md
-    
-plugins:
-  - render_swagger
+  - Задачи:
+    - tasks/add_product.md
+    - tasks/update_product.md
+    - tasks/info_product.md
+    - tasks/product_write_off.md
+    - tasks/product_issuance.md
+    - tasks/expiration_date_control.md
+    - tasks/autozakaz_product.md
+    - tasks/zakaz_product.md 
+    - tasks/inventory.md
+    - tasks/auth_user.md 
 
-  
+    

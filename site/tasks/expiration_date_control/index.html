@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://kapustinaanna.github.io/site/tasks/expiration_date_control/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Контроль срока годности - Требования к системе</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Требования к системе</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Домашняя страница</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../.." class="dropdown-item">Разработка приложения для инвентаризации, автозаказа и контроля сроков хранения продуктов</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Документация</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../glossary/" class="dropdown-item">Глоссарий</a>
+</li>
+                                    
+<li>
+    <a href="../../general%20info/" class="dropdown-item">Общие сведения</a>
+</li>
+                                    
+<li>
+    <a href="../../goals/" class="dropdown-item">Назначение и цели создания (развития) системы</a>
+</li>
+                                    
+<li>
+    <a href="../../characteristics/" class="dropdown-item">Характеристики объекта автоматизации</a>
+</li>
+                                    
+<li>
+    <a href="../../business%20process/" class="dropdown-item">Описание бизнес-процессов</a>
+</li>
+                                    
+<li>
+    <a href="../../requirements/" class="dropdown-item">Требования к системе</a>
+</li>
+                                    
+<li>
+    <a href="../../model/" class="dropdown-item">Информационная модель</a>
+</li>
+                                    
+<li>
+    <a href="../../architecture/" class="dropdown-item">Компонентная архитектура</a>
+</li>
+                                    
+<li>
+    <a href="../../api/" class="dropdown-item">API приложения</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Задачи</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../add_product/" class="dropdown-item">Добавить продукт</a>
+</li>
+                                    
+<li>
+    <a href="../update_product/" class="dropdown-item">Обновить информацию о продукте</a>
+</li>
+                                    
+<li>
+    <a href="../info_product/" class="dropdown-item">Просмотреть информацию о продукте</a>
+</li>
+                                    
+<li>
+    <a href="../product_write_off/" class="dropdown-item">Списание продукта</a>
+</li>
+                                    
+<li>
+    <a href="../product_issuance/" class="dropdown-item">Выдача продукта</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Контроль срока годности</a>
+</li>
+                                    
+<li>
+    <a href="../autozakaz_product/" class="dropdown-item">Автозаказ продуктов</a>
+</li>
+                                    
+<li>
+    <a href="../zakaz_product/" class="dropdown-item">Ручной заказ продуктов</a>
+</li>
+                                    
+<li>
+    <a href="../inventory/" class="dropdown-item">Инвентаризация</a>
+</li>
+                                    
+<li>
+    <a href="../auth_user/" class="dropdown-item">Авторизация пользователя</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../product_issuance/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../autozakaz_product/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Контроль срока годности</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Задачи</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1" class="nav-link">Задача 1: Сделать уведомление о скором окончании срока годности</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2" class="nav-link">Задача 2: Сделать обновление приоритета продукта в очереди</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Контроль срока годности</h1>
+<p><a href="../../requirements/#_19">Контроль срока годности</a></p>
+<h2 id="_2">Задачи</h2>
+<h2 id="1">Задача 1: Сделать уведомление о скором окончании срока годности</h2>
+<p><strong>Критерии приемки:</strong></p>
+<ul>
+<li>Уведомление должно приходить пользователю за 5 дней до окончания срока годности продукта.</li>
+<li>Уведомление должно содержать наименование продукта и дату заканчивания срока годности.</li>
+</ul>
+<h3 id="_3">Основной сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Добавить продукт с известным сроком годности ( 10 дней)</td>
+<td>Продукт успешно добавлен в систему с установленным сроком годности.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Подождать 5 дней</td>
+<td>Система определяет, что срок годности продукта истекает.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Проверить уведомления пользователя</td>
+<td>Уведомление успешно приходит с информацией о продукте и дате окончания срока годности.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_4">Негативный сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Добавить продукт с сроком годности, истекающим через 15 дней</td>
+<td>Продукт успешно добавлен в систему.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Проверить уведомления за 5 дней до окончания срока годности</td>
+<td>Уведомление не приходит.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ознакомиться с сообщением системы</td>
+<td>Система выдает сообщение о том, что уведомление не требуется, поскольку срок годности превышает 5 дней.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2">Задача 2:  Сделать обновление приоритета продукта в очереди</h2>
+<p><strong>Критерии приемки:</strong></p>
+<ul>
+<li>Продукт с истекающим сроком годности должен ставиться первым в очередь на выдачу.</li>
+</ul>
+<h3 id="_5">Позитивный сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Ожидаемый результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Добавить продукт с сроком годности, истекающим через 2 дня. (в системе нет продуктов с меньшим сроком годности)</td>
+<td>Продукт успешно добавлен в систему.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Проверить позицию продукта в очереди на выдачу</td>
+<td>Продукт находится на первом месте в очереди на выдачу.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Проверить статус уведомлений для участников</td>
+<td>Уведомление о срочном статусе продукта отправлено соответствующим участникам.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_6">Негативный сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Ожидаемый результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Добавить продукт с сроком годности, превышающим 5 дней</td>
+<td>Продукт успешно добавлен в систему.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Проверить состояние продукта в очереди на выдачу</td>
+<td>Продукт не ставится в очередь на выдачу в начале списка</td>
+</tr>
+</tbody>
+</table>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

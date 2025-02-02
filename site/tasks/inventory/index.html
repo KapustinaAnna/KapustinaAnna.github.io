@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://kapustinaanna.github.io/site/tasks/inventory/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Инвентаризация - Требования к системе</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Требования к системе</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Домашняя страница</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../.." class="dropdown-item">Разработка приложения для инвентаризации, автозаказа и контроля сроков хранения продуктов</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Документация</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../glossary/" class="dropdown-item">Глоссарий</a>
+</li>
+                                    
+<li>
+    <a href="../../general%20info/" class="dropdown-item">Общие сведения</a>
+</li>
+                                    
+<li>
+    <a href="../../goals/" class="dropdown-item">Назначение и цели создания (развития) системы</a>
+</li>
+                                    
+<li>
+    <a href="../../characteristics/" class="dropdown-item">Характеристики объекта автоматизации</a>
+</li>
+                                    
+<li>
+    <a href="../../business%20process/" class="dropdown-item">Описание бизнес-процессов</a>
+</li>
+                                    
+<li>
+    <a href="../../requirements/" class="dropdown-item">Требования к системе</a>
+</li>
+                                    
+<li>
+    <a href="../../model/" class="dropdown-item">Информационная модель</a>
+</li>
+                                    
+<li>
+    <a href="../../architecture/" class="dropdown-item">Компонентная архитектура</a>
+</li>
+                                    
+<li>
+    <a href="../../api/" class="dropdown-item">API приложения</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Задачи</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../add_product/" class="dropdown-item">Добавить продукт</a>
+</li>
+                                    
+<li>
+    <a href="../update_product/" class="dropdown-item">Обновить информацию о продукте</a>
+</li>
+                                    
+<li>
+    <a href="../info_product/" class="dropdown-item">Просмотреть информацию о продукте</a>
+</li>
+                                    
+<li>
+    <a href="../product_write_off/" class="dropdown-item">Списание продукта</a>
+</li>
+                                    
+<li>
+    <a href="../product_issuance/" class="dropdown-item">Выдача продукта</a>
+</li>
+                                    
+<li>
+    <a href="../expiration_date_control/" class="dropdown-item">Контроль срока годности</a>
+</li>
+                                    
+<li>
+    <a href="../autozakaz_product/" class="dropdown-item">Автозаказ продуктов</a>
+</li>
+                                    
+<li>
+    <a href="../zakaz_product/" class="dropdown-item">Ручной заказ продуктов</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Инвентаризация</a>
+</li>
+                                    
+<li>
+    <a href="../auth_user/" class="dropdown-item">Авторизация пользователя</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../zakaz_product/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../auth_user/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Инвентаризация</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Задачи</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1" class="nav-link">Задача 1: Реализовать экранную форму отображения информации о продукте</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2" class="nav-link">Задача 2: Реализовать функционал системы для поиска товара по штрихкоду</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3" class="nav-link">Задача 3: Реализовать функционал обработка ситуации, когда продукт не найден.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Инвентаризация</h1>
+<p><a href="../../requirements/#_11">UC-12: Инвентаризацияя</a></p>
+<h2 id="_2">Задачи</h2>
+<h2 id="1">Задача 1: Реализовать  экранную форму отображения информации о продукте</h2>
+<p><strong>Критерии приемки:</strong></p>
+<ul>
+<li>Появление окна с детальной информацией о продукте, включая название, описание, количество, срок годности.</li>
+</ul>
+<h3 id="_3">Основной  сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Открыть приложение</td>
+<td>Пользователь видит главный экран приложения.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Пользователь отсканировал штрихкод</td>
+<td>Система успешно считывает штрихкод и отображает информацию о продукте</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Просмотреть информацию о продукте</td>
+<td>Окно с детальной информацией о продукте появляется на экране.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Проверить, что отображается название продукта</td>
+<td>Название продукта соответствует данным в базе.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Проверить, что отображается данные о продукте: срок годности, категория, количество, поставщик, склад.</td>
+<td>Описание продукта соответствует данным в базе.</td>
+</tr>
+<tr>
+<td>6 .</td>
+<td>Пользователь нажимает на кнопку закрыть</td>
+<td>Окно с информацией о продукте успешно закрывается</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_4">Негативный сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Открыть приложение</td>
+<td>Пользователь видит главный экран приложения.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ввести несуществующий штрихкод</td>
+<td>Система не находит продукт и отображает сообщение об ошибке.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ожидать, когда появится сообщение об отсутствии продукта</td>
+<td>На экране появляется сообщение: "Продукт не найден."</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2">Задача 2: Реализовать функционал  системы для поиска товара по штрихкоду</h2>
+<p><strong>Критерии приемки:</strong></p>
+<ul>
+<li>Система должна принимать входящие сигналы от аппарата для сканирования.</li>
+<li>При успешном сканировании система должна отображать информацию по продукту.</li>
+</ul>
+<h3 id="_5">Основной сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Открыть приложение в режиме инвентаризации</td>
+<td>Приложение успешно открыто</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Навести сканер на штрихкод продукта</td>
+<td>Система получает сигнал на сканирование</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Прочитать штрихкод</td>
+<td>Система успешно считывает штрихкод и отображает информацию о продукте</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Просмотреть информацию о продукте</td>
+<td>Пользователь видит подробные данные о продукте, включая название, цену, описание и наличие</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_6">Негативный сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Открыть приложение в режиме инвентаризации</td>
+<td>Приложение успешно открыто</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Навести сканер на штрихкод</td>
+<td>Система не распознает штрихкод и выводит сообщение об ошибке</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Попытаться просмотреть информацию о продукте после неудачного сканирования</td>
+<td>Пользователь видит уведомление о том, что информация о продукте недоступна или сканирование не удалось</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_7">Альтернативный сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Открыть приложение в режиме инвентаризации</td>
+<td>Приложение успешно открыто</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Навести сканер на штрихкод продукта</td>
+<td>Система получает сигнал на сканирование</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Прочитать штрихкод, но продукт отсутствует в базе данных</td>
+<td>Система выдает уведомление о том, что информация о продукте не найдена, предлагает добавить новый продукт</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Выбрать опцию для добавления нового продукта</td>
+<td>Пользователь переходит в режим ввода данных о продукте</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3">Задача 3: Реализовать функционал обработка ситуации, когда продукт не найден.</h2>
+<p><strong>Критерии приемки:</strong></p>
+<ul>
+<li>Система должна выводить сообщение об ошибке, если продукт с заданным штрихкодом не найден.</li>
+<li>Пользователь должен иметь возможность ввести  информацию о ненайденном продукте.</li>
+</ul>
+<h3 id="_8">Основной сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Открыть приложение</td>
+<td>Пользователь видит главный экран приложения.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Навести сканер на штрихкод продукта</td>
+<td>Система получает сигнал на сканирование</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Прочитать штрихкод, который отсутствует в базе данных</td>
+<td>Система отображает сообщение: "Продукт по указанному штрихкоду не найден."</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Нажать кнопку "Добавить продукт"</td>
+<td>Пользователь видит форму для ввода информации о новом продукте</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ввести информацию о новом продукте</td>
+<td>Пользователь успешно заполняет все необходимые поля.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Нажать кнопку сохранения информации</td>
+<td><p>Отправлен запрос на добавления продукта в БД.</p><p>Появилось сообщение, что продукт успешно добавлен в корзину</p></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_9">Негативный сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Открыть приложение</td>
+<td>Пользователь видит главный экран приложения.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Навести сканер на штрихкод продукта</td>
+<td>Система получает сигнал на сканирование</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Прочитать штрихкод, который отсутствует в базе данных</td>
+<td>Система показывает сообщение: "Продукт по указанному штрихкоду не найден."</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Попытаться ввести информацию о новом продукте, оставив одно из обязательных полей пустым</td>
+<td>Система отображает сообщение об ошибке: "Пожалуйста, заполните все обязательные поля."</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Заполнить все обязательные поля</td>
+<td>Пользователь успешно добавляет новый продукт и видит сообщение о том, что продукт добавлен в систему</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Нажать кнопку сохранения информации</td>
+<td><p>Отправлен запрос на добавления продукта в БД.</p><p>Появилось сообщение, что продукт успешно добавлен в корзину</p></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_10">Альтернативный сценарий</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Шаг</strong></th>
+<th><strong>Описание шага</strong></th>
+<th><strong>Результат</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Включить аппарат для сканирования штрихкодов</td>
+<td>Аппарат успешно включен, готов к работе</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Навести сканер на штрихкод продукта</td>
+<td>Система получает сигнал на сканирование</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Прочитать штрихкод, который отсутствует в базе данных</td>
+<td>Система отображает сообщение: "Продукт по указанному штрихкоду не найден."</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Выбрать опцию для ручного ввода информации о новом продукте</td>
+<td>Пользователь переходит на форму для ввода информации о новом продукте</td>
+</tr>
+</tbody>
+</table>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
