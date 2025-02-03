@@ -44,3 +44,6 @@
 
 ![](diagrams/out/class.svg)
 
+## Модель данных
+
+![](diagrams/out/db.svg)

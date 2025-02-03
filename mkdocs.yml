@@ -15,6 +15,7 @@ nav:
     - requirements.md
     - model.md
     - architecture.md
+    - uiux.md
     - api.md
   - Задачи:
     - tasks/add_product.md
