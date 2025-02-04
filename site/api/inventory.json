@@ -88,13 +88,13 @@
           "content" : {
             "application/json" : {
               "schema" : {
-                "$ref" : "#/components/schemas/Product"
+                "$ref" : "#/components/schemas/ProductAdd"
               }
             }
           }
         },
         "responses" : {
-          "201" : {
+          "200" : {
             "description" : "Продукт успешно добавлен",
             "content" : {
               "application/json" : {
@@ -108,9 +108,9 @@
       }
     },
     "/products/{productId}" : {
-      "put" : {
+      "patch" : {
         "tags" : [ "Управление продуктами" ],
-        "summary" : "Списать продукт со склада",
+        "summary" : "Изменить количество продукта",
         "security" : [ {
           "bearerAuth" : [ ]
         } ],
@@ -140,7 +140,7 @@
         },
         "responses" : {
           "200" : {
-            "description" : "Продукт успешно списан",
+            "description" : "Количество продукта изменено",
             "content" : {
               "application/json" : {
                 "schema" : {
@@ -200,6 +200,35 @@
         }
       }
     },
+    "/products/{barcode}" : {
+      "get" : {
+        "tags" : [ "Управление продуктами" ],
+        "summary" : "Получить информацию по продукту по штрихкоду",
+        "security" : [ {
+          "bearerAuth" : [ ]
+        } ],
+        "parameters" : [ {
+          "name" : "barcode",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Продукт найден",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Product"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/orders" : {
       "post" : {
         "tags" : [ "Работа с заказами поставщика" ],
@@ -211,13 +240,13 @@
           "content" : {
             "application/json" : {
               "schema" : {
-                "$ref" : "#/components/schemas/CreateOrderRequest"
+                "$ref" : "#/components/schemas/OrderRequest"
               }
             }
           }
         },
         "responses" : {
-          "201" : {
+          "200" : {
             "description" : "Заказ успешно создан",
             "content" : {
               "application/json" : {
@@ -246,7 +275,7 @@
       }
     },
     "/orders/{orderId}" : {
-      "put" : {
+      "patch" : {
         "tags" : [ "Работа с заказами поставщика" ],
         "summary" : "Обновление заказа поставщику",
         "description" : "Обновляет существующий заказ поставщику.",
@@ -265,7 +294,7 @@
           "content" : {
             "application/json" : {
               "schema" : {
-                "$ref" : "#/components/schemas/UpdateOrderRequest"
+                "$ref" : "#/components/schemas/OrderRequest"
               }
             }
           }
@@ -330,7 +359,7 @@
           }
         },
         "responses" : {
-          "201" : {
+          "200" : {
             "description" : "Процесс инвентаризации успешно создан"
           },
           "400" : {
@@ -437,7 +466,7 @@
           "content" : {
             "application/json" : {
               "schema" : {
-                "$ref" : "#/components/schemas/User"
+                "$ref" : "#/components/schemas/UserAdd"
               }
             }
           },
@@ -562,6 +591,44 @@
       }
     },
     "schemas" : {
+      "ProductAdd" : {
+        "type" : "object",
+        "properties" : {
+          "barcode" : {
+            "type" : "integer",
+            "description" : "штрихкод продукта"
+          },
+          "name" : {
+            "type" : "string",
+            "description" : "Наименование продукта"
+          },
+          "category" : {
+            "type" : "string",
+            "description" : "Категория продукта"
+          },
+          "quantity" : {
+            "type" : "integer",
+            "description" : "Текущее количество продукта на складе"
+          },
+          "criticalquantity" : {
+            "type" : "integer",
+            "description" : "Критическое количество продукта на складе"
+          },
+          "expiryDate" : {
+            "type" : "string",
+            "format" : "date",
+            "description" : "Срок годности продукта"
+          },
+          "warehouse" : {
+            "type" : "string",
+            "description" : "Поставщик"
+          },
+          "supplier" : {
+            "type" : "string",
+            "description" : "Склад"
+          }
+        }
+      },
       "Product" : {
         "type" : "object",
         "properties" : {
@@ -580,6 +647,10 @@
           "quantity" : {
             "type" : "integer",
             "description" : "Текущее количество продукта на складе"
+          },
+          "criticalquantity" : {
+            "type" : "integer",
+            "description" : "Критическое количество продукта на складе"
           },
           "expiryDate" : {
             "type" : "string",
@@ -613,7 +684,7 @@
           }
         }
       },
-      "CreateOrderRequest" : {
+      "OrderRequest" : {
         "type" : "object",
         "properties" : {
           "supplierId" : {
@@ -633,22 +704,6 @@
         },
         "required" : [ "supplierId", "products" ]
       },
-      "UpdateOrderRequest" : {
-        "type" : "object",
-        "properties" : {
-          "products" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/components/schemas/Product"
-            }
-          },
-          "status" : {
-            "type" : "string",
-            "description" : "Новый статус заказа"
-          }
-        },
-        "required" : [ "products" ]
-      },
       "UpdateOrderResponse" : {
         "type" : "object",
         "properties" : {
@@ -659,6 +714,23 @@
           "status" : {
             "type" : "string",
             "description" : "Статус обновленного заказа"
+          }
+        }
+      },
+      "UserAdd" : {
+        "description" : "Информация о пользователе",
+        "properties" : {
+          "name" : {
+            "type" : "string",
+            "description" : "Имя пользователя"
+          },
+          "phoneNumber" : {
+            "type" : "string",
+            "description" : "Телефон"
+          },
+          "email" : {
+            "type" : "string",
+            "description" : "email пользователя"
           }
         }
       },
@@ -684,7 +756,7 @@
             "maxLength" : 2000,
             "minLength" : 50,
             "type" : "string",
-            "description" : "Телефон ресторана"
+            "description" : "Телефон"
           },
           "email" : {
             "maxLength" : 500,
