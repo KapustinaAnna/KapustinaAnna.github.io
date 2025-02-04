@@ -13,4 +13,14 @@
 
 ![](assets/images/notfound.jpg)
 
+### **`WF4`** Cоздание нового процесса инвенатризации)
 
+![](assets/images/inventorystart.png)
+
+### **`WF5`** Ожидание сканирование штрих-кода)
+
+![](assets/images/inventorymain.png)
+
+### **`WF6`** Редактирование продукта)
+
+![](assets/images/updateproduct.png)
